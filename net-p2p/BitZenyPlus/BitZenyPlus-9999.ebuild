@@ -38,6 +38,7 @@ RDEPEND="
 	upnp? ( >=net-libs/miniupnpc-1.9.20150916:= )
 	wallet? ( sys-libs/db:$(db_ver_to_slot "${DB_VER}")=[cxx] )
 	zeromq? ( net-libs/zeromq:= )
+	!net-p2p/bitzeny
 "
 DEPEND="
 	${RDEPEND}
