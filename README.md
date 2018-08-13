@@ -1,7 +1,7 @@
 # jellybean
 My overlay
 
-** How to use **
+**How to use**
 
 Install layman
 ```
