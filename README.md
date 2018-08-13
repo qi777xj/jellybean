@@ -12,7 +12,7 @@ Add below line to /etc/portage/repos.conf/layman.conf
 ```
 [jellybean]
 priority = 50
-location = /var/lib/layman/gig
+location = /var/lib/layman/
 sync-type = git
 sync-uri = https://github.com/qi777xj/jellybean.git
 auto-sync = Yes
