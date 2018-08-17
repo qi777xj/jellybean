@@ -25,6 +25,7 @@ DEPEND="
 	autogtp? ( app-arch/gzip:0= )
 	net-misc/curl:0
 	ocl-icd? ( dev-libs/ocl-icd:0= )
+	sys-libs/glibc
 	sys-libs/zlib
 	sci-libs/openblas
 	dev-libs/boost
