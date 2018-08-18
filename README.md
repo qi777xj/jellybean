@@ -8,17 +8,14 @@ Install layman
 sudo emerge -a layman
 ```
 
-Add below line to /etc/portage/repos.conf/layman.conf
+Add jellybean overlay
+
 ```
-[jellybean]
-priority = 50
-location = /var/lib/layman/jellybean
-sync-type = git
-sync-uri = https://github.com/qi777xj/jellybean.git
-auto-sync = Yes
+sudo layman -a jellybean
 ```
 
-And sync it.
+Sync the overlay
+
 ```
-emerge --sync
+sudo layman -s jellybean
 ```
