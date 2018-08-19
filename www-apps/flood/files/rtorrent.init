@@ -1,0 +1,29 @@
+#!/sbin/openrc-run
+# Copyright 1999-2018 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+depend() {
+    use net ypbind nis
+    after slapd mysqld postgresql
+}
+
+start() {
+    ebegin "Starting rtorrent"
+    env TERM="xterm" \
+        start-stop-daemon \
+            --start \
+            --make-pidfile \
+            --pidfile /var/run/rtorrentd.pid \
+            --background \
+            --name rtorrent \
+            --exec /usr/bin/rtorrent -- -n -o import="/usr/share/flood/rtorrent.rc"
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping rtorrent"
+    pgrep rtorrent > /var/run/rtorrentd.pid
+    start-stop-daemon --stop --signal 15 \
+        --pidfile /var/run/rtorrentd.pid
+    eend $?
+}
