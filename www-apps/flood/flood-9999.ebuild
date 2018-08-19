@@ -24,6 +24,7 @@ SLOT="0"
 DEPEND="
 	net-p2p/rtorrent[xmlrpc]
 	net-libs/nodejs[npm]
+	media-video/mediainfo
 "
 RDEPEND="${DEPEND}"
 
