@@ -1,0 +1,103 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+-1005,7 +1029,40	/var/lib/layman/jellybean/x11-terms/st/files/st-alpha-20180616-0.8.1.patch	/^@@ -1005,7 +1029,40 @@ xinit(int cols, int rows)$/;"	h	language:Diff	modifiedFile:a/x.c
+-1015,7 +1072,11	/var/lib/layman/jellybean/x11-terms/st/files/st-alpha-20180616-0.8.1.patch	/^@@ -1015,7 +1072,11 @@ xinit(int cols, int rows)$/;"	h	language:Diff	modifiedFile:a/x.c
+-1038,16 +1099,15	/var/lib/layman/jellybean/x11-terms/st/files/st-alpha-20180616-0.8.1.patch	/^@@ -1038,16 +1099,15 @@ xinit(int cols, int rows)$/;"	h	language:Diff	modifiedFile:a/x.c
+-1054,13 +1063,54	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -1054,13 +1063,54 @@ tswapscreen(void)$/;"	h	language:Diff	modifiedFile:a/st.c
+-1074,13 +1124,20	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -1074,13 +1124,20 @@ tscrolldown(int orig, int n)$/;"	h	language:Diff	modifiedFile:a/st.c
+-1079,13 +1095,13	/var/lib/layman/jellybean/x11-terms/st/files/st-solarized-both-0.8.1.patch	/^@@ -1079,13 +1095,13 @@ xinit(int cols, int rows)$/;"	h	language:Diff	modifiedFile:a/x.c
+-109,6 +112,7	/var/lib/layman/jellybean/x11-terms/st/files/st-alpha-20180616-0.8.1.patch	/^@@ -109,6 +112,7 @@ static const char *colorname[] = {$/;"	h	language:Diff	modifiedFile:a/config.def.h
+-11,10 +11,10	/var/lib/layman/jellybean/x11-terms/st/files/st-alpha-20180616-0.8.1.patch	/^@@ -11,10 +11,10 @@ X11INC = \/usr\/X11R6\/include$/;"	h	language:Diff	modifiedFile:a/config.mk
+-111,6 +116,9	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -111,6 +116,9 @@ void *xmalloc(size_t);$/;"	h	language:Diff	modifiedFile:a/st.h
+-1129,7 +1186,7	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -1129,7 +1186,7 @@ tnewline(int first_col)$/;"	h	language:Diff	modifiedFile:a/st.c
+-1130,7 +1132,7	/var/lib/layman/jellybean/x11-terms/st/files/st-vertcenter-20180320-6ac8c8a.patch	/^@@ -1130,7 +1132,7 @@$/;"	h	language:Diff	modifiedFile:a/x.c
+-1155,7 +1157,7	/var/lib/layman/jellybean/x11-terms/st/files/st-vertcenter-20180320-6ac8c8a.patch	/^@@ -1155,7 +1157,7 @@$/;"	h	language:Diff	modifiedFile:a/x.c
+-116,10 +108,10	/var/lib/layman/jellybean/x11-terms/st/files/st-solarized-dark-20180411-041912a.patch	/^@@ -116,10 +108,10 @@ static const char *colorname[] = {$/;"	h	language:Diff	modifiedFile:a/config.def.h
+-116,10 +108,10	/var/lib/layman/jellybean/x11-terms/st/files/st-solarized-light-20170623-b331da5.patch	/^@@ -116,10 +108,10 @@ const char *colorname[] = {$/;"	h	language:Diff	modifiedFile:a/config.def.h
+-116,10 +129,10	/var/lib/layman/jellybean/x11-terms/st/files/st-solarized-both-0.8.1.patch	/^@@ -116,10 +129,10 @@ static const char *colorname[] = {$/;"	h	language:Diff	modifiedFile:a/config.def.h
+-117,7 +121,7	/var/lib/layman/jellybean/x11-terms/st/files/st-alpha-20180616-0.8.1.patch	/^@@ -117,7 +121,7 @@ static const char *colorname[] = {$/;"	h	language:Diff	modifiedFile:a/config.def.h
+-118,6 +118,7	/var/lib/layman/jellybean/x11-terms/st/files/st-solarized-both-0.8.1.patch	/^@@ -118,6 +118,7 @@ extern char *vtiden;$/;"	h	language:Diff	modifiedFile:a/st.h
+-119,5 +119,6	/var/lib/layman/jellybean/x11-terms/st/files/st-alpha-20180616-0.8.1.patch	/^@@ -119,5 +119,6 @@ extern char *worddelimiters;$/;"	h	language:Diff	modifiedFile:a/st.h
+-121,6 +121,9	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -121,6 +121,9 @@ typedef struct {$/;"	h	language:Diff	modifiedFile:a/st.c
+-129,3 +136,4	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-mouse-0.8.patch	/^@@ -129,3 +136,4 @@ extern char *termname;$/;"	h	language:Diff	modifiedFile:a/st.h
+-1294,14 +1351,14	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -1294,14 +1351,14 @@ void$/;"	h	language:Diff	modifiedFile:a/st.c
+-1295,7 +1295,7	/var/lib/layman/jellybean/x11-terms/st/files/st-no_bold_colors-0.8.1.patch	/^@@ -1295,7 +1295,7 @@ xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len, in/;"	h	language:Diff	modifiedFile:a/x.c
+-1371,12 +1373,12	/var/lib/layman/jellybean/x11-terms/st/files/st-vertcenter-20180320-6ac8c8a.patch	/^@@ -1371,12 +1373,12 @@$/;"	h	language:Diff	modifiedFile:a/x.c
+-14,6 +14,7	/var/lib/layman/jellybean/x11-terms/st/files/st-xresources-20180309-c5ba9c0.patch	/^@@ -14,6 +14,7 @@$/;"	h	language:Diff	modifiedFile:a/x.c
+-150,6 +150,41	/var/lib/layman/jellybean/x11-terms/st/files/st-xresources-20180309-c5ba9c0.patch	/^@@ -150,6 +150,41 @@ static unsigned int mousebg = 0;$/;"	h	language:Diff	modifiedFile:a/config.def.h
+-156,8 +156,14	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-mouse-0.8.patch	/^@@ -156,8 +156,14 @@ static unsigned int defaultattr = 11;$/;"	h	language:Diff	modifiedFile:a/config.def.h
+-156,8 +156,14	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-mouse-20170427-5a10aca.patch	/^@@ -156,8 +156,14 @@ unsigned int defaultattr = 11;$/;"	h	language:Diff	modifiedFile:a/config.def.h
+-1730,11 +1787,11	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -1730,11 +1787,11 @@ csihandle(void)$/;"	h	language:Diff	modifiedFile:a/st.c
+-178,6 +178,8	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -178,6 +178,8 @@ static Shortcut shortcuts[] = {$/;"	h	language:Diff	modifiedFile:a/config.def.h
+-178,6 +191,7	/var/lib/layman/jellybean/x11-terms/st/files/st-solarized-both-0.8.1.patch	/^@@ -178,6 +191,7 @@ static Shortcut shortcuts[] = {$/;"	h	language:Diff	modifiedFile:a/config.def.h
+-182,6 +182,13	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-mouse-20170427-5a10aca.patch	/^@@ -182,6 +182,13 @@ typedef union {$/;"	h	language:Diff	modifiedFile:a/st.h
+-1864,6 +1876,59	/var/lib/layman/jellybean/x11-terms/st/files/st-xresources-20180309-c5ba9c0.patch	/^@@ -1864,6 +1876,59 @@ run(void)$/;"	h	language:Diff	modifiedFile:a/x.c
+-188,8 +191,8	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -188,8 +191,8 @@ static void tnewline(int);$/;"	h	language:Diff	modifiedFile:a/st.c
+-19,6 +22,8	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -19,6 +22,8 @@$/;"	h	language:Diff	modifiedFile:a/st.h
+-1937,6 +2002,11	/var/lib/layman/jellybean/x11-terms/st/files/st-xresources-20180309-c5ba9c0.patch	/^@@ -1937,6 +2002,11 @@ run:$/;"	h	language:Diff	modifiedFile:a/x.c
+-2258,7 +2315,7	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -2258,7 +2315,7 @@ eschandle(uchar ascii)$/;"	h	language:Diff	modifiedFile:a/st.c
+-2271,7 +2328,7	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -2271,7 +2328,7 @@ eschandle(uchar ascii)$/;"	h	language:Diff	modifiedFile:a/st.c
+-237,6 +237,7	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-mouse-20170427-5a10aca.patch	/^@@ -237,6 +237,7 @@ static Rune utfmax[UTF_SIZ + 1] = {0x10FFFF, 0x7F, 0x7FF, 0xFFFF, 0x10FFFF};$/;"	h	language:Diff	modifiedFile:a/st.c
+-240,6 +241,8	/var/lib/layman/jellybean/x11-terms/st/files/st-solarized-both-0.8.1.patch	/^@@ -240,6 +241,8 @@ static char *opt_title = NULL;$/;"	h	language:Diff	modifiedFile:a/x.c
+-248,6 +248,7	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-mouse-20170427-5a10aca.patch	/^@@ -248,6 +248,7 @@ bpress(XEvent *e)$/;"	h	language:Diff	modifiedFile:a/x.c
+-2490,7 +2547,7	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -2490,7 +2547,7 @@ twrite(const char *buf, int buflen, int show_ctrl)$/;"	h	language:Diff	modifiedFile:a/st.c
+-2527,7 +2584,15	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -2527,7 +2584,15 @@ tresize(int col, int row)$/;"	h	language:Diff	modifiedFile:a/st.c
+-2584,7 +2649,7	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -2584,7 +2649,7 @@ drawregion(int x1, int y1, int x2, int y2)$/;"	h	language:Diff	modifiedFile:a/st.c
+-2605,8 +2670,10	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -2605,8 +2670,10 @@ draw(void)$/;"	h	language:Diff	modifiedFile:a/st.c
+-262,6 +263,14	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-mouse-20170427-5a10aca.patch	/^@@ -262,6 +263,14 @@ bpress(XEvent *e)$/;"	h	language:Diff	modifiedFile:a/x.c
+-271,6 +278,8	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-mouse-20170427-5a10aca.patch	/^@@ -271,6 +278,8 @@ extern unsigned int mousebg;$/;"	h	language:Diff	modifiedFile:a/st.h
+-278,6 +281,14	/var/lib/layman/jellybean/x11-terms/st/files/st-solarized-both-0.8.1.patch	/^@@ -278,6 +281,14 @@ numlock(const Arg *dummy)$/;"	h	language:Diff	modifiedFile:a/x.c
+-3,6 +3,9	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -3,6 +3,9 @@$/;"	h	language:Diff	modifiedFile:a/st.h
+-409,6 +409,7	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-mouse-0.8.patch	/^@@ -409,6 +409,7 @@ bpress(XEvent *e)$/;"	h	language:Diff	modifiedFile:a/x.c
+-424,6 +425,14	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-mouse-0.8.patch	/^@@ -424,6 +425,14 @@ bpress(XEvent *e)$/;"	h	language:Diff	modifiedFile:a/x.c
+-43,6 +44,19	/var/lib/layman/jellybean/x11-terms/st/files/st-xresources-20180309-c5ba9c0.patch	/^@@ -43,6 +44,19 @@ typedef struct {$/;"	h	language:Diff	modifiedFile:a/x.c
+-431,10 +434,10	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -431,10 +434,10 @@ tlinelen(int y)$/;"	h	language:Diff	modifiedFile:a/st.c
+-48,6 +48,10	/var/lib/layman/jellybean/x11-terms/st/files/st-alpha-20180616-0.8.1.patch	/^@@ -48,6 +48,10 @@ typedef struct {$/;"	h	language:Diff	modifiedFile:a/x.c
+-53,6 +53,7	/var/lib/layman/jellybean/x11-terms/st/files/st-solarized-both-0.8.1.patch	/^@@ -53,6 +53,7 @@ static void clipcopy(const Arg *);$/;"	h	language:Diff	modifiedFile:a/x.c
+-543,7 +546,7	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -543,7 +546,7 @@ selsnap(int *x, int *y, int direction)$/;"	h	language:Diff	modifiedFile:a/st.c
+-558,14 +561,14	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -558,14 +561,14 @@ selsnap(int *x, int *y, int direction)$/;"	h	language:Diff	modifiedFile:a/st.c
+-586,14 +589,14	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -586,14 +589,14 @@ selsnap(int *x, int *y, int direction)$/;"	h	language:Diff	modifiedFile:a/st.c
+-624,13 +627,13	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -624,13 +627,13 @@ getsel(void)$/;"	h	language:Diff	modifiedFile:a/st.c
+-686,7 +691,7	/var/lib/layman/jellybean/x11-terms/st/files/st-alpha-20180616-0.8.1.patch	/^@@ -686,7 +691,7 @@ xresize(int col, int row)$/;"	h	language:Diff	modifiedFile:a/x.c
+-700,6 +711,11	/var/lib/layman/jellybean/x11-terms/st/files/st-solarized-both-0.8.1.patch	/^@@ -700,6 +711,11 @@ sixd_to_16bit(int x)$/;"	h	language:Diff	modifiedFile:a/x.c
+-718,7 +734,7	/var/lib/layman/jellybean/x11-terms/st/files/st-solarized-both-0.8.1.patch	/^@@ -718,7 +734,7 @@ xloadcolor(int i, const char *name, Color *ncolor)$/;"	h	language:Diff	modifiedFile:a/x.c
+-731,7 +747,7	/var/lib/layman/jellybean/x11-terms/st/files/st-solarized-both-0.8.1.patch	/^@@ -731,7 +747,7 @@ xloadcols(void)$/;"	h	language:Diff	modifiedFile:a/x.c
+-741,8 +757,8	/var/lib/layman/jellybean/x11-terms/st/files/st-solarized-both-0.8.1.patch	/^@@ -741,8 +757,8 @@ xloadcols(void)$/;"	h	language:Diff	modifiedFile:a/x.c
+-746,6 +751,14	/var/lib/layman/jellybean/x11-terms/st/files/st-alpha-20180616-0.8.1.patch	/^@@ -746,6 +751,14 @@ xloadcols(void)$/;"	h	language:Diff	modifiedFile:a/x.c
+-767,6 +780,17	/var/lib/layman/jellybean/x11-terms/st/files/st-alpha-20180616-0.8.1.patch	/^@@ -767,6 +780,17 @@ xsetcolorname(int x, const char *name)$/;"	h	language:Diff	modifiedFile:a/x.c
+-778,8 +792,8	/var/lib/layman/jellybean/x11-terms/st/files/st-xresources-20180309-c5ba9c0.patch	/^@@ -778,8 +792,8 @@ xclear(int x1, int y1, int x2, int y2)$/;"	h	language:Diff	modifiedFile:a/x.c
+-80,6 +80,7	/var/lib/layman/jellybean/x11-terms/st/files/st-vertcenter-20180320-6ac8c8a.patch	/^@@ -80,6 +80,7 @@$/;"	h	language:Diff	modifiedFile:a/x.c
+-81,6 +81,13	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-mouse-0.8.patch	/^@@ -81,6 +81,13 @@ typedef union {$/;"	h	language:Diff	modifiedFile:a/st.h
+-82,6 +82,9	/var/lib/layman/jellybean/x11-terms/st/files/st-alpha-20180616-0.8.1.patch	/^@@ -82,6 +82,9 @@ char *termname = "st-256color";$/;"	h	language:Diff	modifiedFile:a/config.def.h
+-836,6 +839,9	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -836,6 +839,9 @@ ttyread(void)$/;"	h	language:Diff	modifiedFile:a/st.c
+-84,31 +84,23	/var/lib/layman/jellybean/x11-terms/st/files/st-solarized-dark-20180411-041912a.patch	/^@@ -84,31 +84,23 @@ unsigned int tabspaces = 8;$/;"	h	language:Diff	modifiedFile:a/config.def.h
+-84,31 +84,23	/var/lib/layman/jellybean/x11-terms/st/files/st-solarized-light-20170623-b331da5.patch	/^@@ -84,31 +84,23 @@ static unsigned int tabspaces = 8;$/;"	h	language:Diff	modifiedFile:a/config.def.h
+-84,31 +84,44	/var/lib/layman/jellybean/x11-terms/st/files/st-solarized-both-0.8.1.patch	/^@@ -84,31 +84,44 @@ unsigned int tabspaces = 8;$/;"	h	language:Diff	modifiedFile:a/config.def.h
+-84,44 +84,49	/var/lib/layman/jellybean/x11-terms/st/files/st-dracula-20170803-7f99032.patch	/^@@ -84,44 +84,49 @@ static unsigned int tabspaces = 8;$/;"	h	language:Diff	modifiedFile:a/config.def.h
+-843,6 +849,9	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^@@ -843,6 +849,9 @@ void$/;"	h	language:Diff	modifiedFile:a/st.c
+-949,6 +950,7	/var/lib/layman/jellybean/x11-terms/st/files/st-vertcenter-20180320-6ac8c8a.patch	/^@@ -949,6 +950,7 @@$/;"	h	language:Diff	modifiedFile:a/x.c
+-98,6 +102,7	/var/lib/layman/jellybean/x11-terms/st/files/st-alpha-20180616-0.8.1.patch	/^@@ -98,6 +102,7 @@ typedef struct {$/;"	h	language:Diff	modifiedFile:a/x.c
+-999,8 +1013,6	/var/lib/layman/jellybean/x11-terms/st/files/st-xresources-20180309-c5ba9c0.patch	/^@@ -999,8 +1013,6 @@ xinit(int cols, int rows)$/;"	h	language:Diff	modifiedFile:a/x.c
+a/config.def.h	/var/lib/layman/jellybean/x11-terms/st/files/st-alpha-20180616-0.8.1.patch	/^--- a\/config.def.h$/;"	m	language:Diff
+a/config.def.h	/var/lib/layman/jellybean/x11-terms/st/files/st-dracula-20170803-7f99032.patch	/^--- a\/config.def.h$/;"	m	language:Diff
+a/config.def.h	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^--- a\/config.def.h$/;"	m	language:Diff
+a/config.def.h	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-mouse-0.8.patch	/^--- a\/config.def.h$/;"	m	language:Diff
+a/config.def.h	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-mouse-20170427-5a10aca.patch	/^--- a\/config.def.h$/;"	m	language:Diff
+a/config.def.h	/var/lib/layman/jellybean/x11-terms/st/files/st-solarized-both-0.8.1.patch	/^--- a\/config.def.h$/;"	m	language:Diff
+a/config.def.h	/var/lib/layman/jellybean/x11-terms/st/files/st-solarized-dark-20180411-041912a.patch	/^--- a\/config.def.h$/;"	m	language:Diff
+a/config.def.h	/var/lib/layman/jellybean/x11-terms/st/files/st-solarized-light-20170623-b331da5.patch	/^--- a\/config.def.h$/;"	m	language:Diff
+a/config.def.h	/var/lib/layman/jellybean/x11-terms/st/files/st-xresources-20180309-c5ba9c0.patch	/^--- a\/config.def.h$/;"	m	language:Diff
+a/config.mk	/var/lib/layman/jellybean/x11-terms/st/files/st-alpha-20180616-0.8.1.patch	/^--- a\/config.mk$/;"	m	language:Diff
+a/st.c	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^--- a\/st.c$/;"	m	language:Diff
+a/st.c	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-mouse-20170427-5a10aca.patch	/^--- a\/st.c$/;"	m	language:Diff
+a/st.h	/var/lib/layman/jellybean/x11-terms/st/files/st-alpha-20180616-0.8.1.patch	/^--- a\/st.h$/;"	m	language:Diff
+a/st.h	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-0.8.patch	/^--- a\/st.h$/;"	m	language:Diff
+a/st.h	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-mouse-0.8.patch	/^--- a\/st.h$/;"	m	language:Diff
+a/st.h	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-mouse-20170427-5a10aca.patch	/^--- a\/st.h$/;"	m	language:Diff
+a/st.h	/var/lib/layman/jellybean/x11-terms/st/files/st-solarized-both-0.8.1.patch	/^--- a\/st.h$/;"	m	language:Diff
+a/x.c	/var/lib/layman/jellybean/x11-terms/st/files/st-alpha-20180616-0.8.1.patch	/^--- a\/x.c$/;"	m	language:Diff
+a/x.c	/var/lib/layman/jellybean/x11-terms/st/files/st-no_bold_colors-0.8.1.patch	/^--- a\/x.c$/;"	m	language:Diff
+a/x.c	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-mouse-0.8.patch	/^--- a\/x.c$/;"	m	language:Diff
+a/x.c	/var/lib/layman/jellybean/x11-terms/st/files/st-scrollback-mouse-20170427-5a10aca.patch	/^--- a\/x.c$/;"	m	language:Diff
+a/x.c	/var/lib/layman/jellybean/x11-terms/st/files/st-solarized-both-0.8.1.patch	/^--- a\/x.c$/;"	m	language:Diff
+a/x.c	/var/lib/layman/jellybean/x11-terms/st/files/st-vertcenter-20180320-6ac8c8a.patch	/^--- a\/x.c	Tue Mar 20 00:28:57 2018$/;"	m	language:Diff
+a/x.c	/var/lib/layman/jellybean/x11-terms/st/files/st-xresources-20180309-c5ba9c0.patch	/^--- a\/x.c$/;"	m	language:Diff
