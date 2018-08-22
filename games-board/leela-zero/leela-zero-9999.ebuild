@@ -35,6 +35,13 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}-${PV}
 
+pkg_nofetch() {
+	einfo
+	einfo "This package requiers openblas."
+	einfo "Please install gentoo science overlay."
+	einfo
+}
+
 src_prepare(){
 	eapply_user
 	if use autogtp ; then
