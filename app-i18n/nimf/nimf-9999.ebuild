@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit git-r3 autotools gnome2-utils fdo-mime
+inherit git-r3 autotools gnome2-utils
 
 DESCRIPTION="Nimf is an input method framework."
 HOMEPAGE="https://gitlab.com/nimf-i18n/nimf"
@@ -74,13 +74,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	fdo-mime_desktop_database_update
 	gnome2_icon_cache_update
 	gnome2_schemas_update
 }
 
 pkg_postrm() {
-	fdo-mime_desktop_database_update
 	gnome2_icon_cache_update
 	gnome2_schemas_update
 }
