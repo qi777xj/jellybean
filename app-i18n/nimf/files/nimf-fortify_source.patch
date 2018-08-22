@@ -1,0 +1,13 @@
+diff --git a/configure.ac b/configure.ac
+index 1e53d7f..8713f5d 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -18,7 +18,7 @@ AS_IF([test "$CXX" = "g++"],
+       [AS_IF([test "$GXX" != "yes"],
+       AC_MSG_ERROR([C++ compiler is not found.]))])
+ 
+-EXTRA_CFLAGS="-Wall -Werror -D_FORTIFY_SOURCE=2"
++EXTRA_CFLAGS="-Wall -Werror -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2"
+ AC_SUBST(EXTRA_CFLAGS)
+ 
+ 

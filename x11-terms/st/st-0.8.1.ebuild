@@ -37,6 +37,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/st-vertcenter-20180320-6ac8c8a.patch
 	epatch "${FILESDIR}"/st-scrollback-0.8.patch
+	epatch "${FILESDIR}"/st-scrollback-mouse-0.8.patch
 
 	if use alpha; then
 		epatch "${FILESDIR}"/st-alpha-20180616-0.8.1.patch
