@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit gnome2-utils eutils
+inherit gnome2-utils
 
 DESCRIPTION="Graphical User Interface for CryptoBridge DEX"
 HOMEPAGE="https://crypto-bridge.org/"
