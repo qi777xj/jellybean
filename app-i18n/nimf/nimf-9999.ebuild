@@ -62,7 +62,7 @@ pkg_preinst() {
 
 src_prepare() {
 	default
-	sh autogen.sh --prefix=/usr || die
+	sh autogen.sh --prefix=/usr --disable-hardening || die
 }
 
 src_install() {
