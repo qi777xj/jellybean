@@ -48,10 +48,6 @@ DEPEND="
 	x11-base/xorg-proto
 "
 
-PATCHES=(
-	"${FILESDIR}"/nimf-fortify_source.patch
-)
-
 pkg_nofetch() {
 	einfo
 	einfo "This package requires Qt4 libraries and frameworks"
