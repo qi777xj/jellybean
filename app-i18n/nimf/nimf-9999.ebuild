@@ -48,6 +48,10 @@ DEPEND="
 	x11-base/xorg-proto
 "
 
+PATCHES=(
+	"${FILESDIR}"/nimf-fortify_source.patch
+)
+
 pkg_nofetch() {
 	einfo
 	einfo "This package requires Qt4 libraries and frameworks"
@@ -62,7 +66,7 @@ pkg_preinst() {
 
 src_prepare() {
 	default
-	sh autogen.sh --prefix=/usr --disable-hardening || die
+	sh autogen.sh --prefix=/usr || die
 }
 
 src_install() {
