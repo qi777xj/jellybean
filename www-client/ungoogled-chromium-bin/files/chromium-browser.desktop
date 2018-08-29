@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Chromium
+Type=Application
+Comment=Modifications to Google Chromium for removing Google integration and enhancing privacy, control, and transparency
+Exec=chromium-browser
+TryExec=chromium-browser
+Icon=chromium-browser
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;applications/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;x-scheme-handler/mailto;x-scheme-handler/webcal;
+StartupWMClass=chromium-browser
