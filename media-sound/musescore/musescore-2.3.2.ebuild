@@ -46,6 +46,7 @@ DEPEND="${RDEPEND}
 	"
 
 PATCHES=(
+	"${FILESDIR}/${P}-fix-buildsystem.patch"
 	"${FILESDIR}/${P}-qtsingleapplication.patch"
 )
 
