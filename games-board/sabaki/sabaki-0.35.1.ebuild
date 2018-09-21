@@ -26,7 +26,7 @@ SLOT="0"
 
 # get dependencies via readelf -a sabaki...
 DEPEND="
-	sys-apps/yarn
+	net-libs/nodejs[npm]
 	x11-libs/cairo
 	x11-libs/pango
 	media-libs/fontconfig
@@ -50,12 +50,12 @@ S=${WORKDIR}/${PN^}-${PV}
 
 src_prepare() {
 	default
-	yarn install || die "yarn module installation failed"
+	npm install || die "npm module installation failed"
 }
 
 
 src_compile() {
-	yarn run build || die "build failed"
+	npm run build || die "build failed"
 }
 
 
