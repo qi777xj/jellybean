@@ -5,11 +5,11 @@ EAPI=6
 DB_VER="4.8"
 inherit autotools bash-completion-r1 db-use gnome2-utils xdg-utils
 
-MY_P="bitzeny-z2.0.1"
+MY_P="bitzeny-z${PV}"
 
 DESCRIPTION="BitZeny core"
 HOMEPAGE="https://bitzeny.tech/"
-SRC_URI="https://github.com/BitzenyCoreDevelopers/bitzeny/archive/z2.0.1.tar.gz"
+SRC_URI="https://github.com/BitzenyCoreDevelopers/bitzeny/archive/z${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
