@@ -53,13 +53,15 @@ src_install() {
 	dodir /usr/share/flood
 	dodir /usr/share/flood/.session
 	dodir /usr/share/flood/torrent
-	insinto /usr/share/flood
+	insinto /etc
 	doins ${FILESDIR}/rtorrent.rc
 	newinitd ${FILESDIR}/rtorrent.init rtorrentd
 	newinitd ${FILESDIR}/flood.init flood
 }
 
 pkg_postinst() {
-	elog "The rtorrent config file is /usr/share/flood/rtorrent.rc"
+	elog
+	elog "The rtorrent config file is /etc/rtorrent.rc"
 	elog "The init script of flood and rtorrent(daemon) are flood and rtorrentd"
+	elog
 }

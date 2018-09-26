@@ -16,7 +16,7 @@ start() {
             --pidfile /var/run/rtorrentd.pid \
             --background \
             --name rtorrent \
-            --exec /usr/bin/rtorrent -- -n -o import="/usr/share/flood/rtorrent.rc"
+            --exec /usr/bin/rtorrent -- -n -o import="/etc/rtorrent.rc"
     eend $?
 }
 
