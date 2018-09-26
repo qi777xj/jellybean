@@ -3,7 +3,7 @@
 
 EAPI=6
 
-CHROMIUM_PV="${PV/_pre2/}-2"
+CHROMIUM_PV="${PV/-r1/}-1"
 
 CHROMIUM_LANGS="
 	am ar bg bn ca cs da de el en-GB en-US es-419 es et fa fi fil fr gu he hi hr hu id it ja kn ko lt lv ml mr ms nb nl pl pt-BR pt-PT ro ru sk sl sr sv sw ta te th tr uk vi zh-CN zh-TW
@@ -13,7 +13,7 @@ inherit chromium-2 gnome2-utils xdg-utils eutils
 
 DESCRIPTION="Modifications to Google Chromium for removing Google integration and enhancing privacy, control, and transparency"
 HOMEPAGE="https://github.com/Eloston/ungoogled-chromium"
-SRC_URI="https://github.com/Eloston/ungoogled-chromium-binaries/releases/download/${CHROMIUM_PV}/ungoogled-chromium_${CHROMIUM_PV}_linux.tar.xz"
+SRC_URI="https://github.com/Intika/ungoogled-chromium-binaries/releases/download/${CHROMIUM_PV}/ungoogled-chromium_${CHROMIUM_PV}_linux.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -46,7 +46,7 @@ RDEPEND="${DEPEND}"
 
 QA_PREBUILT="*"
 
-S="${WORKDIR}/ungoogled-chromium_${CHROMIUM_PV/-2/}-1_linux"
+S="${WORKDIR}/ungoogled-chromium_${CHROMIUM_PV}_linux"
 
 pkg_setup() {
 	chromium_suid_sandbox_check_kernel_config
