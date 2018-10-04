@@ -11,9 +11,11 @@ CHROMIUM_LANGS="
 
 inherit chromium-2 gnome2-utils readme.gentoo-r1 xdg-utils
 
-MY_PV="${PV/-r1/}-1"
+MY_PV="${PV/-r2/}-2"
+S_PV="${PV/-r2/}-1"
 MY_PN="${PN/-bin}"
 MY_P="${MY_PN}_${MY_PV}_linux"
+S_P="${MY_PN}_${S_PV}_linux"
 
 DESCRIPTION="Modifications to Chromium for removing Google integration and enhancing privacy"
 HOMEPAGE="https://github.com/Eloston/ungoogled-chromium"
@@ -92,7 +94,7 @@ GTK+ icon theme.
 
 QA_PREBUILT="*"
 
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${S_P}"
 
 pkg_pretend() {
 	# Protect against people using autounmask overzealously
