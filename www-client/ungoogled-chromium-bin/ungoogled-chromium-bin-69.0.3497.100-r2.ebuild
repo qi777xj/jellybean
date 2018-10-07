@@ -12,15 +12,14 @@ CHROMIUM_LANGS="
 inherit chromium-2 gnome2-utils readme.gentoo-r1 xdg-utils
 
 MY_PV="${PV/-r2/}-2"
-S_PV="${PV/-r2/}-1"
 MY_PN="${PN/-bin}"
 MY_P="${MY_PN}_${MY_PV}_linux"
-S_P="${MY_PN}_${S_PV}_linux"
+
+URL="https://www.opendesktop.org/p/1265177"
 
 DESCRIPTION="Modifications to Chromium for removing Google integration and enhancing privacy"
 HOMEPAGE="https://github.com/Eloston/ungoogled-chromium"
-SRC_URI="https://github.com/intika/${PN}aries/releases/download/${MY_PV}/${MY_P}.tar.xz -> ${P}.tar.xz"
-RESTRICT="mirror"
+SRC_URI=""
 
 LICENSE="BSD"
 SLOT="0"
@@ -28,6 +27,7 @@ KEYWORDS="-* ~amd64"
 IUSE="+suid widevine"
 
 RDEPEND="
+	net-misc/curl
 	app-accessibility/at-spi2-atk:2
 	app-arch/bzip2
 	>=net-print/cups-1.3.11
@@ -94,7 +94,7 @@ GTK+ icon theme.
 
 QA_PREBUILT="*"
 
-S="${WORKDIR}/${S_P}"
+S="${WORKDIR}/${MY_P}"
 
 pkg_pretend() {
 	# Protect against people using autounmask overzealously
@@ -103,6 +103,13 @@ pkg_pretend() {
 
 pkg_setup() {
 	chromium_suid_sandbox_check_kernel_config
+}
+
+src_unpack() {
+	local HASH_TIME=($(curl -s "$URL" | grep -e "hash =" -e "timetamp =" | sed "s/.*= '\(.*\)';/\1/"))
+	cd "${WORKDIR}}"
+	curl https://dl.opendesktop.org/api/files/downloadfile/id/1538485969/s/${HASH_TIME[0]}/t/${HASH_TIME[1]}/${MY_P}.tar.xz -o ${P}.tar.xz
+	unpack "${WORKDIR}/${P}.tar.xz"
 }
 
 src_install() {
