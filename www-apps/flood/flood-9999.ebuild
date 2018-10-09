@@ -62,6 +62,6 @@ src_install() {
 pkg_postinst() {
 	elog
 	elog "The rtorrent config file is /etc/rtorrent.rc"
-	elog "The init script of flood and rtorrent(daemon) are flood and rtorrentd"
+	elog "The init scripts of flood and rtorrent(daemon) are flood and rtorrentd"
 	elog
 }
