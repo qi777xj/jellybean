@@ -27,7 +27,7 @@ DEPEND="
 	ocl-icd? ( dev-libs/ocl-icd:0= )
 	sys-libs/glibc
 	sys-libs/zlib
-	sci-libs/openblas
+	sci-libs/openblas[-openmp,-threads]
 	dev-libs/boost
 	virtual/opencl
 "
