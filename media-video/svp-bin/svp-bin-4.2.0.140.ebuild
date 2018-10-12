@@ -9,7 +9,7 @@ DESCRIPTION="SmoothVideo Project 4 (SVP4)"
 HOMEPAGE="https://www.svp-team.com/wiki/SVP:Linux"
 SRC_URI="https://gist.githubusercontent.com/phiresky/1e2cbd30bed4e5978771af232d11afd1/raw/svp4-${PV}.tbz2"
 
-LICENSE="custom"
+LICENSE="svp"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
