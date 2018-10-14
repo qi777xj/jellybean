@@ -107,7 +107,7 @@ pkg_setup() {
 
 src_unpack() {
 	local HASH_TIME=($(curl -s "$URL" | grep -e "hash =" -e "timetamp =" | sed "s/.*= '\(.*\)';/\1/"))
-	cd "${WORKDIR}}"
+	cd "${WORKDIR}"
 	curl https://dl.opendesktop.org/api/files/downloadfile/id/1538485969/s/${HASH_TIME[0]}/t/${HASH_TIME[1]}/${MY_P}.tar.xz -o ${P}.tar.xz
 	unpack "${WORKDIR}/${P}.tar.xz"
 }
