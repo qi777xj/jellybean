@@ -22,6 +22,7 @@ LICENSE="GPL-3.0"
 SLOT="0"
 
 DEPEND="
+	net-misc/curl[adns]
 	net-p2p/rtorrent[xmlrpc]
 	net-libs/nodejs[npm]
 	media-video/mediainfo
