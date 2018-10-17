@@ -6,7 +6,7 @@ EAPI=6
 DESCRIPTION="Go engine with no human-provided knowledge, modeled after the AlphaGo Zero paper."
 HOMEPAGE="https://github.com/gcp/leela-zero"
 if [[ ${PV} == "9999" ]]; then
-	SCM="git-r3"
+	inherit git-r3
 
 	SRC_URI=""
 	EGIT_REPO_URI="https://github.com/gcp/leela-zero.git"
@@ -31,9 +31,12 @@ DEPEND="
 	dev-libs/boost
 	virtual/opencl
 "
+
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${PN}-${PV}
+if [[ ${PV} != "9999" ]]; then
+	S="${WORKDIR}/${P}"
+fi
 
 pkg_nofetch() {
 	einfo
