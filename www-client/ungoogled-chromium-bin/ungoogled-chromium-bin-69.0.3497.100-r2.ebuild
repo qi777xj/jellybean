@@ -12,6 +12,7 @@ CHROMIUM_LANGS="
 inherit chromium-2 gnome2-utils readme.gentoo-r1 xdg-utils
 
 MY_PV="${PV/-r2/}-2"
+
 MY_PN="${PN/-bin}"
 MY_P="${MY_PN}_${MY_PV}_linux"
 
@@ -24,7 +25,7 @@ SRC_URI=""
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="-* ~amd64"
-IUSE="+suid widevine"
+IUSE="+suid widevine vaapi"
 
 RDEPEND="
 	net-misc/curl
@@ -40,7 +41,7 @@ RDEPEND="
 	>=dev-libs/re2-0.2016.05.01
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/fontconfig
-	media-libs/freetype
+	media-libs/freetype:2
 	>=media-libs/harfbuzz-1.6.0
 	media-libs/libjpeg-turbo
 	media-libs/libpng
@@ -52,7 +53,7 @@ RDEPEND="
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf:2
 	x11-libs/gtk+:3[X]
-	>=x11-libs/libva-2.2.0
+	vaapi? ( >=x11-libs/libva-2.2.0[opengl] )
 	x11-libs/libX11
 	x11-libs/libXcomposite
 	x11-libs/libXcursor
