@@ -14,7 +14,7 @@ IUSE=""
 
 DEPEND="
 	x11-misc/i3lock-color
-	media-gfx/imagemagick
+	media-gfx/imagemagick[-q8,-q32]
 	x11-apps/xdpyinfo
 	x11-apps/xrandr
 	sys-devel/bc
