@@ -62,7 +62,8 @@ src_install() {
 	dosym /opt/svp/SVPManager /usr/bin/SVPManager
 	fperms -R +rX /opt/svp
 	fperms +x /opt/svp/SVPManager
-	fperms +x /opt/svp/*.sh
+	fperms +x /opt/svp/add-menuitem.sh
+	fperms +x /opt/svp/remove-menuitem.sh
 	fperms -R +rX /usr/share
 }
 
