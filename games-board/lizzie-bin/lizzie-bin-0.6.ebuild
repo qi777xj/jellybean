@@ -41,5 +41,5 @@ src_install() {
 	dosym /usr/share/leela-zero/best-network /opt/lizzie/network.gz
 	newbin "${FILESDIR}/${P}.sh" lizzie
 	fperms +x /usr/bin/lizzie
-	fperms +x /opt/lizzie/lizzie.jar
+	fperms -R +x /opt/lizzie
 }
