@@ -4,7 +4,7 @@
 EAPI=6
 
 PYTHON_COMPAT=( python3_{4,5,6} )
-inherit toolchain-funcs python-r1 meson ninja-utils gnome2-utils
+inherit python-r1 meson gnome2-utils
 
 DESCRIPTION="The maintainance fork of compton"
 HOMEPAGE="https://github.com/yshui/compton"
@@ -45,12 +45,12 @@ pkg_setup() {
 
 src_configure() {
 	local emesonargs=(
+		--buildtype=release
 		-Dopengl=$(usex opengl true false)
 		-Dregex=$(usex pcre true false)
 		-Ddbus=$(usex dbus true false)
 		-Dvsync_drm=$(usex drm true false)
 		-Dxinerama=$(usex xinerama true false)
-		--buildtype=release
 	)
 	meson_src_configure
 }
