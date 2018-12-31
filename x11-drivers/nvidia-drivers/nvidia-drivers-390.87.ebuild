@@ -207,6 +207,10 @@ src_prepare() {
 	if use kernel_linux && kernel_is ge 4 19; then
 		eapply "${FILESDIR}"/kernel-4.19.patch
 	fi
+
+	if use kernel_linux && kernel_is ge 4 20; then
+		eapply "${FILESDIR}"/kernel-4.20.patch
+	fi
 }
 
 src_compile() {
