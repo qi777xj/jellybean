@@ -28,12 +28,12 @@ S="${WORKDIR}"
 src_unpack() {
 	local HASH_TIME=($(curl -s "$URL" | grep -e "hash =" -e "timetamp =" | sed "s/.*= '\(.*\)';/\1/"))
 	cd "$S"
-	curl https://dl.opendesktop.org/api/files/downloadfile/id/1545889799/s/${HASH_TIME[0]}/t/${HASH_TIME[1]}/Matcha-sea.tar.xz -o Matcha-sea.tar.xz
-	curl https://dl.opendesktop.org/api/files/downloadfile/id/1545889772/s/${HASH_TIME[0]}/t/${HASH_TIME[1]}/Matcha-azul.tar.xz -o Matcha-azul.tar.xz
-	curl https://dl.opendesktop.org/api/files/downloadfile/id/1545889792/s/${HASH_TIME[0]}/t/${HASH_TIME[1]}/Matcha-aliz.tar.xz -o Matcha-aliz.tar.xz
-	curl https://dl.opendesktop.org/api/files/downloadfile/id/1545889786/s/${HASH_TIME[0]}/t/${HASH_TIME[1]}/Matcha-dark-sea.tar.xz -o Matcha-dark-sea.tar.xz
-	curl https://dl.opendesktop.org/api/files/downloadfile/id/1545889850/s/${HASH_TIME[0]}/t/${HASH_TIME[1]}/Matcha-dark-azul.tar.xz -o Matcha-dark-azul.tar.xz
-	curl https://dl.opendesktop.org/api/files/downloadfile/id/1545889794/s/${HASH_TIME[0]}/t/${HASH_TIME[1]}/Matcha-dark-aliz.tar.xz -o Matcha-dark-aliz.tar.xz
+	curl https://dl.opendesktop.org/api/files/downloadfile/id/1547285489/s/${HASH_TIME[0]}/t/${HASH_TIME[1]}/Matcha-sea.tar.xz -o Matcha-sea.tar.xz
+	curl https://dl.opendesktop.org/api/files/downloadfile/id/1547285440/s/${HASH_TIME[0]}/t/${HASH_TIME[1]}/Matcha-azul.tar.xz -o Matcha-azul.tar.xz
+	curl https://dl.opendesktop.org/api/files/downloadfile/id/1547285421/s/${HASH_TIME[0]}/t/${HASH_TIME[1]}/Matcha-aliz.tar.xz -o Matcha-aliz.tar.xz
+	curl https://dl.opendesktop.org/api/files/downloadfile/id/1547285497/s/${HASH_TIME[0]}/t/${HASH_TIME[1]}/Matcha-dark-sea.tar.xz -o Matcha-dark-sea.tar.xz
+	curl https://dl.opendesktop.org/api/files/downloadfile/id/1547285512/s/${HASH_TIME[0]}/t/${HASH_TIME[1]}/Matcha-dark-azul.tar.xz -o Matcha-dark-azul.tar.xz
+	curl https://dl.opendesktop.org/api/files/downloadfile/id/1547285485/s/${HASH_TIME[0]}/t/${HASH_TIME[1]}/Matcha-dark-aliz.tar.xz -o Matcha-dark-aliz.tar.xz
 	unpack "${S}"/*.tar.xz
 }
 
