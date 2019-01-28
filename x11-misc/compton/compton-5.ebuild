@@ -18,11 +18,13 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 COMMON_DEPEND="${PYTHON_DEPS}
 	dev-libs/libconfig:=
+	dev-libs/libxdg-basedir
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libxcb
 	x11-libs/xcb-util-renderutil
 	x11-libs/xcb-util-image
+	x11-libs/pixman
 	dev-libs/libev
 	dbus? ( sys-apps/dbus )
 	opengl? ( virtual/opengl )
