@@ -17,6 +17,7 @@ IUSE=""
 DEPEND="
 	=games-board/leela-zero-9999
 	app-arch/unzip
+	virtual/jre
 "
 RDEPEND="${DEPEND}"
 
