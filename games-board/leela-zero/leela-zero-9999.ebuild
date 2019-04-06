@@ -23,7 +23,7 @@ IUSE="autogtp ocl-icd"
 DEPEND="
 	autogtp? ( dev-qt/qtcore:5= )
 	autogtp? ( app-arch/gzip:0= )
-	net-misc/curl:0
+	net-misc/wget
 	ocl-icd? ( dev-libs/ocl-icd:0= )
 	sys-libs/glibc
 	sys-libs/zlib
@@ -53,7 +53,7 @@ src_prepare(){
 		cd ${S}
 	fi
 	cd ${S}
-	curl http://zero.sjeng.org/best-network -o best-network
+	wget http://zero.sjeng.org/best-network -O best-network
 }
 
 src_install(){
