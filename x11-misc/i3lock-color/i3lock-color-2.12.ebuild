@@ -11,7 +11,7 @@ SRC_URI="https://github.com/PandorasFox/i3lock-color/archive/${MY_PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="pam"
 
 DEPEND="
 	dev-util/pkgconfig
@@ -22,10 +22,18 @@ DEPEND="
 	x11-libs/libX11
 	x11-libs/libxkbcommon
 	media-libs/libjpeg-turbo
+	pam? ( virtual/pam )
 "
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P}.c"
+
+src_prepare() {
+	if ! use pam; then
+		eapply "${FILESDIR}/${P}-no-pam.patch"
+	fi
+	eapply_user
+}
 
 src_compile() {
 	autoreconf -i
@@ -38,6 +46,8 @@ src_install() {
 	pushd ${FILESDIR}
 	dobin lock lock
 	popd
+	fowners 0.0 /usr/bin/i3lock
+	fperms 4751 /usr/bin/i3lock
 }
 
 pkg_postinst() {
