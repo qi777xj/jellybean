@@ -1,5 +1,5 @@
 # jellybean
-My overlay
+My personal overlay
 
 **How to use**
 
