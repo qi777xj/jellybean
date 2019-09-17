@@ -1,5 +1,5 @@
 # jellybean
-My personal overlay
+My personal overlay with packages patched for musl and libressl
 
 **How to use**
 
