@@ -1,0 +1,25 @@
+diff -Naur a/runtime/os/os_posix.cpp b/runtime/os/os_posix.cpp
+--- a/runtime/os/os_posix.cpp	2019-07-09 02:19:44.000000000 +0000
++++ b/runtime/os/os_posix.cpp	2019-08-26 23:00:15.154076156 +0000
+@@ -42,6 +42,21 @@
+ #include <limits.h>
+ #include <memory>
+ #include <algorithm>
++#include <libgen.h>
++
++#ifndef __ELF_NATIVE_CLASS
++#ifdef __LP64__
++#define __ELF_NATIVE_CLASS 64
++#else
++#define __ELF_NATIVE_CLASS 32
++#endif
++#endif
++
++#ifndef ElfW
++#define ElfW(type)      _ElfW (Elf, __ELF_NATIVE_CLASS, type)
++#define _ElfW(e,w,t)    _ElfW_1 (e, w, _##t)
++#define _ElfW_1(e,w,t) e##w##t
++#endif
+ 
+ 
+ namespace amd {
