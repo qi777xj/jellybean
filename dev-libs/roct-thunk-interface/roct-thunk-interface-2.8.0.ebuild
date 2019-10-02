@@ -19,6 +19,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-2.6.0-pc-prefix.patch"
 	"${FILESDIR}/${PN}-2.6.0-do-not-install-kfd_ioctl.h.patch"
 	"${FILESDIR}/${PN}-2.6.0-musl.patch"
+	"${FILESDIR}/${PN}-2.8.0-musl-MAXNAMLEN.patch"
 )
 
 DESCRIPTION="Radeon Open Compute Thunk Interface"

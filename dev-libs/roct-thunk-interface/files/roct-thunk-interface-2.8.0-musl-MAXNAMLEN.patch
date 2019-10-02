@@ -1,0 +1,20 @@
+diff -Naur a/src/topology.c b/src/topology.c
+--- a/src/topology.c	2019-09-19 20:36:44.000000000 -0000
++++ b/src/topology.c	2019-10-02 16:18:46.747116484 -0000
+@@ -34,6 +34,7 @@
+ #include <pci/pci.h>
+ #include <errno.h>
+ #include <sys/sysinfo.h>
++#include <limits.h>
+ 
+ #include "libhsakmt.h"
+ #include "fmm.h"
+@@ -1166,7 +1167,7 @@
+ 	 * which can be present twice in the string above. 29 is for the prefix
+ 	 * and the +6 is for the cache suffix
+ 	 */
+-	const uint32_t MAXPATHSIZE = 29 + MAXNAMLEN + (MAXNAMLEN + 6);
++	const uint32_t MAXPATHSIZE = 29 + NAME_MAX + (NAME_MAX + 6);
+ 	cpu_cacheinfo_t *p_temp_cpu_ci_list; /* a list of cpu_ci */
+ 	char path[MAXPATHSIZE], node_dir[MAXPATHSIZE];
+ 	int max_cpus;
