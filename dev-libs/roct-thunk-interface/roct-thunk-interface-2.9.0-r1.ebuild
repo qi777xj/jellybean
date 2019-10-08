@@ -13,18 +13,15 @@ else
 	S="${WORKDIR}/ROCT-Thunk-Interface-roc-${PV}"
 	KEYWORDS="~amd64"
 fi
+
 PATCHES=(
-	"${FILESDIR}/${PN}-2.6.0-correctly-install.patch"
-	"${FILESDIR}/${PN}-2.6.0-correctly-install-pc.patch"
-	"${FILESDIR}/${PN}-2.6.0-pc-prefix.patch"
-	"${FILESDIR}/${PN}-2.6.0-do-not-install-kfd_ioctl.h.patch"
-	"${FILESDIR}/${PN}-2.6.0-musl.patch"
-	"${FILESDIR}/${PN}-2.8.0-musl-MAXNAMLEN.patch"
+    "${FILESDIR}/${PN}-2.6.0-musl.patch"
+    "${FILESDIR}/${PN}-2.8.0-musl-MAXNAMLEN.patch"
 )
 
 DESCRIPTION="Radeon Open Compute Thunk Interface"
 HOMEPAGE="https://github.com/RadeonOpenCompute/ROCT-Thunk-Interface"
-CONFIG_CHECK="~HSA_AMD ~HMM_MIRROR ~ZONE_DEVICE"
+CONFIG_CHECK="~NUMA ~HSA_AMD ~HMM_MIRROR ~ZONE_DEVICE"
 LICENSE="MIT"
 SLOT="0/$(ver_cut 1-2)"
 
@@ -35,6 +32,13 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	sed -e "s:get_version ( \"1.0.0\" ):get_version ( \"${PV}\" ):" -i CMakeLists.txt || die
 	cmake-utils_src_prepare
+}
+src_configure() {
+	local mycmakeargs=(
+		-DCMAKE_INSTALL_PREFIX="${EPREFIX}/usr/"
+		-DCPACK_PACKAGING_INSTALL_PREFIX="${EPREFIX}/usr"
+	)
+	cmake-utils_src_configure
 }
 src_compile() {
 	cmake-utils_src_compile build-dev
