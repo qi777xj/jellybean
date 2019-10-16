@@ -32,14 +32,14 @@ DEPEND="${RDEPEND}
 	dev-ml/findlib"
 
 PATCHES=(
-	"${FILESDIR}/${P}-change-install-location.patch"
-	"${FILESDIR}/${P}-change-AMDCompilerh.patch"
-	"${FILESDIR}/${P}-change-opencl.patch"
-	"${FILESDIR}/${P}-update-README.patch"
-	"${FILESDIR}/${P}-amdocl64icd.patch"
-	"${FILESDIR}/${PN}-2.6.0-musl_elf.patch"
-	"${FILESDIR}/${PN}-2.6.0-musl_cdefs.patch"
-	"${FILESDIR}/${PN}-2.6.0-musl_remove_versioned_symbol.patch"
+    "${FILESDIR}/${PN}-2.6.0-musl-elf.patch"
+    "${FILESDIR}/${PN}-2.6.0-musl-cdefs.patch"
+    "${FILESDIR}/${PN}-2.6.0-musl-remove-versioned-symbol.patch"
+	"${FILESDIR}/${PN}-2.8.0-change-install-location.patch"
+	"${FILESDIR}/${PN}-2.8.0-change-AMDCompilerh.patch"
+	"${FILESDIR}/${PN}-2.8.0-change-opencl.patch"
+	"${FILESDIR}/${PN}-2.8.0-update-README.patch"
+	"${FILESDIR}/${PN}-2.8.0-amdocl64icd.patch"
 )
 
 src_prepare() {
