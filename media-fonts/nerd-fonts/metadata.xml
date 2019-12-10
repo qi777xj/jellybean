@@ -39,7 +39,6 @@
 		<flag name="overpass">Install Nerd-fonts-patched Overpass fonts</flag>
 		<flag name="profont">Install Nerd-fonts-patched Pro Font fonts</flag>
 		<flag name="proggyclean">Install Nerd-fonts-patched Proggy Clean fonts</flag>
-		<flag name="regular">Install Nerd-fonts-patched Regular fonts</flag>
 		<flag name="robotomono">Install Nerd-fonts-patched Roboto Mono fonts</flag>
 		<flag name="sharetechmono">Install Nerd-fonts-patched Share Tech Mono fonts</flag>
 		<flag name="sourcecodepro">Install Nerd-fonts-patched Source Code Pro fonts</flag>
