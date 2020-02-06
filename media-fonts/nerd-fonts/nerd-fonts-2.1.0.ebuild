@@ -14,26 +14,34 @@ KEYWORDS="~amd64 ~x86"
 
 DIRNAME=(
 	3270
+	Agave
 	AnonymousPro
 	Arimo
 	AurulentSansMono
 	BigBlueTerminal
 	BitstreamVeraSansMono
+	CascadiaCode
+	CodeNewRoman
 	Cousine
+	DaddyTimeMono
 	DejaVuSansMono
 	DroidSansMono
 	FantasqueSansMono
 	FiraCode
 	FiraMono
 	Go-Mono
+	Gohu
 	Hack
 	Hasklig
 	HeavyData
 	Hermit
+	iA-Writer
+	IBMPlexMono
 	Inconsolata
 	InconsolataGo
 	InconsolataLGC
 	Iosevka
+	JetBrainsMono
 	Lekton
 	LiberationMono
 	Meslo
@@ -54,6 +62,7 @@ DIRNAME=(
 	Tinos
 	Ubuntu
 	UbuntuMono
+	VictorMono
 )
 
 IUSE_FLAGS=(${DIRNAME[*],,})
@@ -62,26 +71,34 @@ REQUIRED_USE="X || ( ${IUSE_FLAGS[*]} )"
 
 MY_URI="https://github.com/ryanoasis/${PN}/releases/download/v${PV}"
 SRC_URI="3270?            ( "${MY_URI}/3270.zip" )
+    agave?                  ( "${MY_URI}/Agave.zip" )
     anonymouspro?           ( "${MY_URI}/AnonymousPro.zip" )
     arimo?                  ( "${MY_URI}/Arimo.zip" )
     aurulentsansmono?       ( "${MY_URI}/AurulentSansMono.zip" )
     bigblueterminal?        ( "${MY_URI}/BigBlueTerminal.zip" )
     bitstreamverasansmono?  ( "${MY_URI}/BitstreamVeraSansMono.zip" )
+    cascadiacode?           ( "${MY_URI}/CascadiaCode.zip" )
+    codenewroman?           ( "${MY_URI}/CodeNewRoman.zip" )
     cousine?                ( "${MY_URI}/Cousine.zip" )
+    daddytimemono?          ( "${MY_URI}/DaddyTimeMono.zip" )
 	dejavusansmono?         ( "${MY_URI}/DejaVuSansMono.zip" )
 	droidsansmono?          ( "${MY_URI}/DroidSansMono.zip" )
 	fantasquesansmono?      ( "${MY_URI}/FantasqueSansMono.zip" )
 	firacode?               ( "${MY_URI}/FiraCode.zip" )
 	firamono?               ( "${MY_URI}/FiraMono.zip" )
 	go-mono?                ( "${MY_URI}/Go-Mono.zip" )
+	gohu?                   ( "${MY_URI}/Gohu.zip" )
 	hack?                   ( "${MY_URI}/Hack.zip" )
 	hasklig?                ( "${MY_URI}/Hasklig.zip" )
 	heavydata?              ( "${MY_URI}/HeavyData.zip" )
 	hermit?                 ( "${MY_URI}/Hermit.zip" )
+	ia-writer?              ( "${MY_URI}/iA-Writer.zip" )
+	ibmplexmono?            ( "${MY_URI}/IBMPlexMono.zip" )
 	inconsolata?            ( "${MY_URI}/Inconsolata.zip" )
 	inconsolatago?          ( "${MY_URI}/InconsolataGo.zip" )
 	inconsolatalgc?         ( "${MY_URI}/InconsolataLGC.zip" )
 	iosevka?                ( "${MY_URI}/Iosevka.zip" )
+	jetbrainsmono?          ( "${MY_URI}/JetBrainsMono.zip" )
 	lekton?                 ( "${MY_URI}/Lekton.zip" )
 	liberationmono?         ( "${MY_URI}/LiberationMono.zip" )
 	meslo?                  ( "${MY_URI}/Meslo.zip" )
@@ -102,6 +119,7 @@ SRC_URI="3270?            ( "${MY_URI}/3270.zip" )
 	tinos?                  ( "${MY_URI}/Tinos.zip" )
 	ubuntu?                 ( "${MY_URI}/Ubuntu.zip" )
 	ubuntumono?             ( "${MY_URI}/UbuntuMono.zip" )
+	victormono?             ( "${MY_URI}/VictorMono.zip" )
 "
 
 DEPEND="app-arch/unzip"
