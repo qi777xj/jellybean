@@ -1,0 +1,31 @@
+diff -Naur a/lib/libf2fs.c b/lib/libf2fs.c
+--- a/lib/libf2fs.c	2019-09-25 02:20:31.000000000 +0000
++++ b/lib/libf2fs.c	2020-07-09 14:46:43.970783097 +0000
+@@ -769,7 +769,7 @@
+ 	ASSERT(st_buf);
+ 
+ 	if (stat(path, st_buf) == 0 && S_ISBLK(st_buf->st_mode)) {
+-		int fd = open(path, O_RDONLY | O_EXCL);
++		int fd = open(path, O_RDONLY);
+ 
+ 		if (fd >= 0) {
+ 			close(fd);
+@@ -892,15 +892,9 @@
+ 			return -1;
+ 		}
+ 
+-		if (S_ISBLK(stat_buf->st_mode) && !c.force && c.func != DUMP) {
+-			fd = open(dev->path, O_RDWR | O_EXCL);
+-			if (fd < 0)
+-				fd = open_check_fs(dev->path, O_EXCL);
+-		} else {
+-			fd = open(dev->path, O_RDWR);
+-			if (fd < 0)
+-				fd = open_check_fs(dev->path, 0);
+-		}
++		fd = open(dev->path, O_RDWR);
++		if (fd < 0)
++			fd = open_check_fs(dev->path, 0);
+ 	}
+ 	if (fd < 0) {
+ 		MSG(0, "\tError: Failed to open the device!\n");

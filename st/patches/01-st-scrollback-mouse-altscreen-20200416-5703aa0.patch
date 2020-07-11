@@ -1,0 +1,45 @@
+diff -Naur a/st.c b/st.c
+--- a/st.c	2020-07-01 14:22:39.020888001 +0000
++++ b/st.c	2020-07-01 14:24:50.450886652 +0000
+@@ -1057,6 +1057,11 @@
+ 	treset();
+ }
+ 
++int tisaltscr(void)
++{
++        return IS_SET(MODE_ALTSCREEN);
++}
++
+ void
+ tswapscreen(void)
+ {
+diff -Naur a/st.h b/st.h
+--- a/st.h	2020-07-01 14:22:39.024221334 +0000
++++ b/st.h	2020-07-01 14:25:27.060886263 +0000
+@@ -89,6 +89,7 @@
+ void toggleprinter(const Arg *);
+ 
+ int tattrset(int);
++int tisaltscr(void);
+ void tnew(int, int);
+ void tresize(int, int);
+ void tsetdirtattr(int);
+diff -Naur a/x.c b/x.c
+--- a/x.c	2020-07-01 14:22:09.090888306 +0000
++++ b/x.c	2020-07-01 14:28:19.584217786 +0000
+@@ -34,6 +34,7 @@
+ 	void (*func)(const Arg *);
+ 	const Arg arg;
+ 	uint  release;
++	int  altscrn;  /* 0: don't care, -1: not alt screen, 1: alt screen */
+ } MouseShortcut;
+ 
+ typedef struct {
+@@ -446,6 +447,7 @@
+ 	for (ms = mshortcuts; ms < mshortcuts + LEN(mshortcuts); ms++) {
+ 		if (ms->release == release &&
+ 		    ms->button == e->xbutton.button &&
++		    (!ms->altscrn || (ms->altscrn == (tisaltscr() ? 1 : -1))) &&
+ 		    (match(ms->mod, state) ||  /* exact or forced */
+ 		     match(ms->mod, state & ~forcemousemod))) {
+ 			ms->func(&(ms->arg));

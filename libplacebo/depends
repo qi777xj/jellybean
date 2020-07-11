@@ -1,0 +1,6 @@
+glslang
+libepoxy
+meson           make
+python-mako     make
+vulkan-headers
+vulkan-loader

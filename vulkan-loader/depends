@@ -1,0 +1,5 @@
+cmake           make
+libX11
+libXrandr
+python-lxml
+vulkan-headers

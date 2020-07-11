@@ -1,0 +1,13 @@
+#!/bin/sh -e
+
+patch -p1 < f2fs-tools-1.13.0-fsck.patch
+
+sed -i '/sg_write_buffer/d' tools/Makefile.am
+
+autoreconf -fi
+
+./configure \
+	--prefix=/usr
+
+make
+make DESTDIR="$1" install

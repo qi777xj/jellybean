@@ -1,0 +1,6 @@
+https://dl.suckless.org/st/st-0.8.4.tar.gz
+files/config.h
+patches/00-st-scrollback-20200419-72e3f6c.patch
+patches/01-st-scrollback-mouse-altscreen-20200416-5703aa0.patch
+patches/02-st-anysize-0.8.1.patch
+patches/03-st-xresources-20200604-9ba7ecf.patch

@@ -1,0 +1,38 @@
+#!/bin/sh -e
+
+./configure \
+    CFLAGS="$CFALGS -fcommon" \
+    --prefix=/usr \
+    --with-x \
+    --with-gtk3 \
+    --enable-openssl \
+    --with-xft \
+    --enable-pref \
+    --without-anthy \
+    --without-anthy-utf8 \
+    --without-canna \
+    --without-curl \
+    --without-eb \
+    --disable-emacs \
+    --without-expat \
+    --without-libedit \
+    --without-ffi \
+    --without-gtk2 \
+    --disable-fep \
+    --disable-nls \
+    --without-qt5 \
+    --without-qt5-immodule \
+    --without-skk \
+    --without-sqlite3 \
+    --disable-static \
+    --enable-default-toolkit=gtk3 \
+    --disable-gnome-applet \
+    --disable-gnome3-applet \
+    --disable-kde-applet \
+    --disable-kde4-applet \
+    --without-mana \
+    --without-prime \
+    --disable-qt4-qt3support
+
+make
+make -j1 DESTDIR="$1" install
