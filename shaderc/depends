@@ -1,0 +1,5 @@
+cmake           make
+glslang
+python          make
+spirv-headers   make
+spirv-tools
