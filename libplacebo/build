@@ -7,7 +7,7 @@ meson \
     -Dtests=false \
     -Dvulkan=enabled \
     -Dglslang=enabled \
-    -Dshaderc=disabled \
+    -Dshaderc=enabled \
     -Dlcms=disabled \
     . output
 

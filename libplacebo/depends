@@ -2,5 +2,6 @@ glslang
 libepoxy
 meson           make
 python-mako     make
+shaderc
 vulkan-headers
 vulkan-loader
