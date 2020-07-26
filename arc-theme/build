@@ -1,0 +1,17 @@
+#!/bin/sh -e
+
+autoreconf -fi
+
+./configure \
+    --prefix=/usr \
+    --disable-cinnamon \
+    --disable-gnome-shell \
+    --disable-gtk2 \
+    --disable-metacity \
+    --disable-openbox \
+    --disable-plank \
+    --disable-unity \
+    --disable-xfwm
+
+make
+make DESTDIR="$1" install

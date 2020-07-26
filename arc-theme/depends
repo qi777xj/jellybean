@@ -1,0 +1,5 @@
+autoconf    make
+automake    make
+inkscape    make
+sassc       make
+optipng     make
