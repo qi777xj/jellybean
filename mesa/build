@@ -20,6 +20,7 @@ meson \
     -Dgallium-va=true \
     -Dllvm=true \
     -Dosmesa=gallium \
+    -Dzstd=false \
     . output
 
 ninja -C output
