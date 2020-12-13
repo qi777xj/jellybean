@@ -2,22 +2,19 @@
 
 export DESTDIR="$1"
 
-for patch in *.patch; do
-    patch -p1 < "$patch"
-done
-
 sed -i -e '/examples/d;/third_party/d' CMakeLists.txt
 sed -i -e '/build-version/d' glslc/CMakeLists.txt
 cat <<- EOF > glslc/src/build-version.inc
-    "shaderc 2020.1\n"
-    "SPIRV-Tools-2020.3\n"
-    "glslang-8.13.3743\n"
+    "shaderc 2020.4\n"
+    "SPIRV-Tools-2020.5\n"
+    "glslang-11.0.0\n"
 EOF
 
 cmake -B build \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_BUILD_TYPE=Release \
-    -DSHADERC_SKIP_TESTS=ON
+    -DSHADERC_SKIP_TESTS=ON \
+    -Dglslang_SOURCE_DIR=/usr/include/glslang
 
 cmake --build   build
 cmake --install build

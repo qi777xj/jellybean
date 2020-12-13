@@ -1,3 +1,1 @@
-https://github.com/google/shaderc/archive/v2020.1.tar.gz
-patches/shaderc-2020.1-fix-build.patch
-patches/shaderc-2020.1-fix-glslang-link-order.patch
+https://github.com/google/shaderc/archive/v2020.4.tar.gz
