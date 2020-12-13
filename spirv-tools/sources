@@ -1,1 +1,2 @@
-https://github.com/KhronosGroup/SPIRV-Tools/archive/v2020.3.tar.gz
+https://github.com/KhronosGroup/SPIRV-Tools/archive/v2020.5.tar.gz
+patches/spirv-tools-2020.5-build-against-spirv-headers-1.5.4.patch
