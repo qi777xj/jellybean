@@ -2,8 +2,6 @@
 
 export DESTDIR="$1"
 
-patch -p1 < spirv-tools-2020.5-build-against-spirv-headers-1.5.4.patch
-
 cmake -B build \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_BUILD_TYPE=Release \
