@@ -6,7 +6,9 @@ cmake -B build \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_BUILD_TYPE=Release \
     -DSPIRV_WERROR=OFF \
-    -DSPIRV-Headers_SOURCE_DIR=/usr
+    -DSPIRV-Headers_SOURCE_DIR=/usr \
+    -DSPIRV_TOOLS_BUILD_STATIC=OFF \
+    -DBUILD_SHARED_LIBS=ON
 
 cmake --build   build
 cmake --install build
