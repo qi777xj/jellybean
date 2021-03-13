@@ -1,0 +1,5 @@
+bzip2               make
+xorgproto           make
+xorg-util-macros    make
+libfontenc
+freetype-harfbuzz
