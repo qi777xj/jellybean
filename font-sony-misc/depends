@@ -1,0 +1,5 @@
+bzip2               make
+mkfontscale         make
+bdftopcf            make
+xorg-util-macros    make
+fontconfig
