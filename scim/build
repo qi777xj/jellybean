@@ -1,0 +1,13 @@
+#!/bin/sh -e
+
+autoreconf -fi
+
+./configure \
+    --prefix=/usr \
+    --enable-ld-version-script \
+    --with-gtk-version=3 \
+    --disable-qt3-immodule \
+    --disable-qt4-immodule
+
+make
+make DESTDIR="$1" install

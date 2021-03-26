@@ -1,0 +1,14 @@
+#!/bin/sh -e
+
+patch -p1 < scim-hangul-0.4.0-gtk.patch
+
+touch ChangeLog
+
+autoreconf -fi
+
+./configure \
+    --prefix=/usr \
+    --disable-skim-support
+
+make
+make DESTDIR="$1" install

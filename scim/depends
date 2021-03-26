@@ -1,0 +1,6 @@
+autoconf    make
+automake    make
+perl        make
+intltool    make
+libtool     make
+gtk+3
