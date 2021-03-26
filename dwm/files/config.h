@@ -89,6 +89,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		        XK_equal,  setgaps,	       {.i = -1 } },
 	{ 0,                            XK_Print,  spawn,          SHCMD("sleep 0.2; scrot -e 'mv $f /home/jellybean/Pictures/ScreenShots/'") },
 	{ MODKEY,                       XK_Print,  spawn,          SHCMD("sleep 0.2; scrot -s -e 'mv $f /home/jellybean/Pictures/ScreentShots/'") },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("slock") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
