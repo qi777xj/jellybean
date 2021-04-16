@@ -1,17 +1,12 @@
 #!/bin/sh -e
 
-autoreconf -fi
+export DESTDIR="$1"
 
-./configure \
+meson \
     --prefix=/usr \
-    --disable-cinnamon \
-    --disable-gnome-shell \
-    --disable-gtk2 \
-    --disable-metacity \
-    --disable-openbox \
-    --disable-plank \
-    --disable-unity \
-    --disable-xfwm
+    -Dthemes=gtk3 \
+    -Dgtk3_version=3.24 \
+    . output
 
-make
-make DESTDIR="$1" install
+ninja -C output
+ninja -C output install
