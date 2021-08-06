@@ -2,4 +2,5 @@ autoconf	make
 automake	make
 git		make
 libtool		make
+pkgconf		make
 util-linux
