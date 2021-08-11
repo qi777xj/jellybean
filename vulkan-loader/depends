@@ -1,5 +1,4 @@
 cmake           make
-libX11
-libXrandr
+wayland
 python-lxml
 vulkan-headers
