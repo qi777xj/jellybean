@@ -1,7 +1,6 @@
 #!/bin/sh -e
 
-./configure \
-    --prefix=/usr
+perl Makefile.PL
 
 make
 make DESTDIR="$1" install

@@ -1,0 +1,11 @@
+#!/bin/sh -e
+
+for patch in *.patch; do
+	patch -p1 < "$patch"
+done
+
+# Amend install path to '/usr'.
+sed -i'' "s#/usr/local#/usr#" config.mk
+
+make
+make DESTDIR="$1" install

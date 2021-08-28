@@ -1,0 +1,14 @@
+autoconf            make
+automake            make
+gtk+3               make
+gettext             make
+intltool            make
+libICE              make
+libSM               make
+libX11              make
+libXext             make
+libXft              make
+libXrender          make
+libXt               make
+libressl            make
+xorgproto           make
