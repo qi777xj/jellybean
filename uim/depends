@@ -10,5 +10,5 @@ libXext             make
 libXft              make
 libXrender          make
 libXt               make
-libressl            make
+openssl             make
 xorgproto           make
