@@ -87,8 +87,8 @@ static Key keys[] = {
 	{ MODKEY,			            XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,			            XK_equal,  setgaps,	       {.i = 0  } },
 	{ MODKEY|ShiftMask,		        XK_equal,  setgaps,	       {.i = -1 } },
-	{ 0,                            XK_Print,  spawn,          SHCMD("sleep 0.2; scrot -e 'mv $f /home/jellybean/Pictures/ScreenShots/'") },
-	{ MODKEY,                       XK_Print,  spawn,          SHCMD("sleep 0.2; scrot -s -e 'mv $f /home/jellybean/Pictures/ScreentShots/'") },
+	{ 0,                            XK_Print,  spawn,          SHCMD("maim /home/jellybean/Pictures/ScreenShots/screenshot-$(date +%Y%m%d%H%M%S).png") },
+	{ MODKEY,                       XK_Print,  spawn,          SHCMD("maim -s /home/jellybean/Pictures/ScreenShots/screenshot-$(date +%Y%m%d%H%M%S).png") },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("slock") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
