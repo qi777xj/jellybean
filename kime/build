@@ -1,0 +1,28 @@
+#!/bin/sh -e
+
+export DESTDIR="$1"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$PWD/target/release"
+
+cargo build --release \
+	-pkime-engine-capi \
+	-pkime-xim \
+	-pkime
+
+install -Dm755 target/release/kime-xim				"$1/usr/bin/kime-xim"
+install -Dm755 target/release/kime					"$1/usr/bin/kime"
+
+cmake src -B build \
+	-DCMAKE_INSTALL_PREFIX=/usr \
+	-DCMAKE_BUILD_TYPE=Release \
+	-DENABLE_GTK2=OFF \
+	-DENABLE_GTK3=ON \
+	-DENABLE_GTK4=OFF \
+	-DENABLE_QT5=OFF \
+	-DENABLE_QT6=OFF
+
+cmake --build	build
+
+install -Dm755 target/release/kime-xim				"$1/usr/bin/kime-xim"
+install -Dm755 target/release/kime					"$1/usr/bin/kime"
+install -Dm755 target/release/libkime_engine.so		"$1/usr/lib/libkime_engine.so"
+install -Dm755 build/lib/libkime-gtk3.so			"$1/usr/lib/gtk-3.0/3.0.0/immodules/im-kime.so"

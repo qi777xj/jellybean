@@ -1,0 +1,8 @@
+cmake		make
+clang		make
+fontconfig
+freetype-harfbuzz
+gtk+3
+libxcb
+pkgconf		make
+rust		make
