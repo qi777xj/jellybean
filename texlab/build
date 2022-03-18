@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+export DESTDIR="$1"
+
+cargo build --release --locked
+
+install -Dm755 target/release/texlab	"$1/usr/bin/texlab"
