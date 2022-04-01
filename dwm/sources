@@ -1,5 +1,6 @@
-https://dl.suckless.org/dwm/dwm-6.2.tar.gz
+https://dl.suckless.org/dwm/dwm-6.3.tar.gz
 files/config.h
-patches/dwm-actualfullscreen-20191112-cb3f58a.patch
-patches/dwm-fullgaps-6.2.patch
-patches/dwm-notitle-6.2.patch
+patches/dwm-actualfullscreen-20211013-cb3f58a.patch
+patches/dwm-fullgaps-20200508-7b77734.patch
+patches/dwm-movestack-20211115-a786211.patch
+patches/dwm-notitle-20210715-138b405.patch
