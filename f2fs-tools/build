@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-patch -p1 < f2fs-tools-1.14.0-fsck.patch
+patch -p1 < f2fs-tools-1.15.0-fsck.patch
 
 sed -i '/sg_write_buffer/d' tools/Makefile.am
 

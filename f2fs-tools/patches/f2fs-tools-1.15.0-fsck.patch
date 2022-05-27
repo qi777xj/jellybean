@@ -1,7 +1,6 @@
-diff -Naur a/lib/libf2fs.c b/lib/libf2fs.c
---- a/lib/libf2fs.c	2020-08-24 21:55:54.000000000 +0000
-+++ b/lib/libf2fs.c	2020-10-04 20:32:43.815381087 +0000
-@@ -786,7 +786,7 @@
+--- a/lib/libf2fs.c
++++ b/lib/libf2fs.c
+@@ -796,7 +796,7 @@
  	ASSERT(st_buf);
  
  	if (stat(path, st_buf) == 0 && S_ISBLK(st_buf->st_mode)) {
@@ -10,7 +9,7 @@ diff -Naur a/lib/libf2fs.c b/lib/libf2fs.c
  
  		if (fd >= 0) {
  			close(fd);
-@@ -909,16 +909,9 @@
+@@ -924,16 +924,9 @@
  			return -1;
  		}
  
