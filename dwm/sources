@@ -1,4 +1,4 @@
-https://dl.suckless.org/dwm/dwm-VERSION.tar.gz
+https://dl.suckless.org/dwm/dwm-6.4.tar.gz
 files/config.h
 patches/dwm-actualfullscreen-20211013-cb3f58a.patch
 patches/dwm-fullgaps-20200508-7b77734.patch
