@@ -1,0 +1,45 @@
+#!/bin/sh -e
+
+export DESTDIR="$1"
+
+meson setup \
+    -Dprefix=/usr \
+    -Dlocalstatedir=/var \
+    -Dsysconfdir=/etc \
+    -Dx11=disabled \
+    -Ddaemon=false \
+    -Ddoxygen=false \
+    -Dgcov=false \
+    -Ddatabase=simple \
+    -Dstream-restore-clear-old-devices=true \
+    -Drunning-from-build-tree=false \
+    -Dbluez5=disabled \
+    -Dbluez5-gstreamer=disabled \
+    -Dbluez5-native-headset=false \
+    -Dbluez5-ofono-headset=false \
+    -Delogind=disabled \
+    -Dfftw=disabled \
+    -Dhal-compat=false \
+    -Dipv6=true \
+    -Djack=disabled \
+    -Dlirc=disabled \
+    -Dopenssl=disabled \
+    -Dorc=disabled \
+    -Doss-output=disabled \
+    -Dsamplerate=disabled \
+    -Dsoxr=disabled \
+    -Dspeex=disabled \
+    -Dtcpwrap=disabled \
+    -Dudev=disabled \
+    -Dadrian-aec=false \
+    -Dwebrtc-aec=disabled \
+    -Dgsettings=disabled \
+    -Dgtk=disabled \
+    -Dtests=false \
+    -Ddbus=disabled \
+    -Dgstreamer=disabled \
+    -Dman=false \
+    output
+
+ninja -C output
+ninja -C output install
