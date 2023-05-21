@@ -1,0 +1,25 @@
+#!/bin/sh -e
+
+echo DESTDIR="$1"
+
+echo "int main(void) { return 1; }" > revokefs/main.c
+:>revokefs/writer.c
+
+PYTHONPATH=$PWD/pyparsing:$(python -c "import sys; print(':'.join(sys.path))")
+export PYTHONPATH
+
+meson setup \
+    -Dprefix=/usr \
+    -Dlibexecdir=/usr/lib \
+    -Dsysconfdir=/etc \
+    -Dsystem_bubblewrap=bwrap \
+    -Dseccomp=enabled \
+    -Dsystem_helper=disabled \
+    -Dxauth=disabled \
+    -Ddocbook_docs=disabled \
+    -Dgtkdoc=disabled \
+    -Dtests=false \
+    output
+
+ninja -C output
+ninja -C output install
