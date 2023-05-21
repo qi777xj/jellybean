@@ -1,2 +1,2 @@
-https://github.com/KhronosGroup/glslang/archive/VERSION.tar.gz
+https://github.com/KhronosGroup/glslang/archive/12.2.0.tar.gz
 patches/install-static-libs.patch
