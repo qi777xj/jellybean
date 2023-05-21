@@ -5,6 +5,8 @@ export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$PWD/target/release"
 
 cargo build --release \
 	-pkime-engine-capi \
+	-pkime-candidate-window \
+	-pkime-check \
 	-pkime-xim \
 	-pkime
 
@@ -22,6 +24,8 @@ cmake src -B build \
 
 cmake --build	build
 
+install -Dm755 target/release/kime-check            "$1/usr/bin/kime-check"
+install -Dm755 target/release/kime-candidate-window "$1/usr/bin/kime-candidate-window"
 install -Dm755 target/release/kime-xim				"$1/usr/bin/kime-xim"
 install -Dm755 target/release/kime					"$1/usr/bin/kime"
 install -Dm755 target/release/libkime_engine.so		"$1/usr/lib/libkime_engine.so"
