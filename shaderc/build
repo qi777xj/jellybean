@@ -5,8 +5,8 @@ export DESTDIR="$1"
 sed -i -e '/examples/d;/third_party/d' CMakeLists.txt
 sed -i -e '/build-version/d' glslc/CMakeLists.txt
 cat <<- EOF > glslc/src/build-version.inc
-    "shaderc 2023.3\n"
-    "SPIRV-Tools-2023.2\n"
+    "shaderc 2023.4\n"
+    "SPIRV-Tools-2023.3\n"
     "glslang-12.2.0\n"
 EOF
 
