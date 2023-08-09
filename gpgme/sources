@@ -1,0 +1,2 @@
+https://gnupg.org/ftp/gcrypt/gpgme/gpgme-VERSION.tar.bz2
+patches/gpgme_1.21.0-off_t.patch

@@ -1,0 +1,14 @@
+#!/bin/sh -e
+
+patch -p1 < gpgme_1.21.0-off_t.patch
+
+./configure \
+    --prefix=/usr \
+    --disable-nls \
+    --disable-gpg-test
+
+make
+make DESTDIR="$1" install
+
+# Ensure that gpgme-config is always installed
+cp -f src/gpgme-config "$1/usr/bin/"
