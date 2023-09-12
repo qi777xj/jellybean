@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-patch -p1 < gpgme_1.21.0-off_t.patch
+export CFLAGS="$CFLAGS -D_LARGEFILE64_SOURCE"
 
 ./configure \
     --prefix=/usr \
