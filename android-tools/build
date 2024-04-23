@@ -1,5 +1,7 @@
 #!/bin/sh -e
 
+export DESTDIR="$1"
+
 export CFLAGS="$CFLAGS -D_LARGEFILE64_SOURCE"
 export CXXFLAGS="$CXXFLAGS -D_LARGEFILE64_SOURCE"
 
