@@ -1,4 +1,4 @@
-https://dl.suckless.org/st/st-0.9.tar.gz
+https://dl.suckless.org/st/st-0.9.2.tar.gz
 files/config.h
 patches/00-st-scrollback-20210507-4536f46.patch
 patches/01-st-scrollback-mouse-altscreen-20200416-5703aa0.patch
