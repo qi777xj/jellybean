@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-echo DESTDIR="$1"
+export DESTDIR="$1"
 
 echo "int main(void) { return 1; }" > revokefs/main.c
 :>revokefs/writer.c
