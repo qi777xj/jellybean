@@ -1,22 +1,10 @@
---- a/OGLCompilersDLL/CMakeLists.txt
-+++ b/OGLCompilersDLL/CMakeLists.txt
-@@ -41,7 +41,7 @@
-     source_group("Source" FILES ${SOURCES})
- endif(WIN32)
- 
--if(ENABLE_GLSLANG_INSTALL AND NOT BUILD_SHARED_LIBS)
-+if(ENABLE_GLSLANG_INSTALL)
-     install(TARGETS OGLCompiler EXPORT glslang-targets)
- 
-     # Backward compatibility
 --- a/glslang/OSDependent/Unix/CMakeLists.txt
 +++ b/glslang/OSDependent/Unix/CMakeLists.txt
-@@ -52,7 +52,7 @@
-     target_link_libraries(OSDependent Threads::Threads)
- endif()
+@@ -40,6 +40,6 @@
+ find_package(Threads REQUIRED)
+ target_link_libraries(OSDependent Threads::Threads)
  
--if(ENABLE_GLSLANG_INSTALL AND NOT BUILD_SHARED_LIBS)
-+if(ENABLE_GLSLANG_INSTALL)
+-if(GLSLANG_ENABLE_INSTALL AND NOT BUILD_SHARED_LIBS)
++if(GLSLANG_ENABLE_INSTALL)
      install(TARGETS OSDependent EXPORT glslang-targets)
- 
-     # Backward compatibility
+ endif()
