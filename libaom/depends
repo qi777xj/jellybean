@@ -1,0 +1,3 @@
+cmake   make
+perl    make
+yasm    make
