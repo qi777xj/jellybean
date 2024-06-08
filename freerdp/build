@@ -23,6 +23,8 @@ cmake -B build \
     -DWITH_SERVER=ON \
     -DWITH_PCSC=OFF \
     -DWITH_LIBSYSTEMD=OFF \
+    -DWITH_KRB5=OFF \
+    -DWITH_FUSE=OFF \
     -DWITH_X11=ON \
     -DWITH_XINERAMA=ON \
     -DWITH_XV=ON \
