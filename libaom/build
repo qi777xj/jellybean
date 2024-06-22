@@ -1,14 +1,15 @@
 #!/bin/sh -e
 
 export DESTDIR="$1"
+export CFLAGS="$CFLAGS -D_POSIX_C_SOURCE=200809L"
 
 cmake -B build \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_C_FLAGS="$CFLAGS" \
     -DBUILD_SHARED_LIBS=1 \
     -DENABLE_TESTS=0 \
-    -DENABLE_DOCS=OFF \
-    -DENABLE_TESTS=OFF
+    -DENABLE_DOCS=OFF
 
 cmake --build build
 cmake --install build
