@@ -3,6 +3,8 @@
 export DESTDIR="$1"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$PWD/target/release"
 
+patch -p1 < kime-3.0.2-hhkb-mac-mode-hangul.patch
+
 cargo build --release \
 	-pkime-engine-capi \
 	-pkime-candidate-window \
