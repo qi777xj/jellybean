@@ -7,7 +7,7 @@ sed -i -e '/build-version/d' glslc/CMakeLists.txt
 cat <<- EOF > glslc/src/build-version.inc
     "shaderc 2024.1\n"
     "SPIRV-Tools-2024.2\n"
-    "glslang-14.2.0\n"
+    "glslang-14.3.0\n"
 EOF
 
 cmake -B build \
