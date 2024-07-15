@@ -2,7 +2,12 @@ alsa-lib
 cairo
 cups
 ffmpeg
+freetype-harfbuzz
+gdk-pixbuf
+glib
+gtk+3
 icu
+json-c
 libICE
 libSM
 libX11
@@ -17,7 +22,12 @@ libXrender
 libXtst
 libXv
 libjpeg-turbo
+libsoup
 libxkbfile
 openssl
+pango
 pkcs11-helper
+sdl2
+sdl2_ttf
+webkit2gtk
 zlib
