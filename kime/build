@@ -2,8 +2,12 @@
 
 export DESTDIR="$1"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$PWD/target/release"
+export CARGO_HOME="$PWD"
+export RUSTFLAGS="$RUSTFLAGS --remap-path-prefix=$PWD=."
 
-patch -p1 < kime-3.0.2-hhkb-mac-mode-hangul.patch
+patch -p1 < kime-updated-bindgens.patch
+
+mkdir -p .cargo
 
 cargo build --release \
 	-pkime-engine-capi \
