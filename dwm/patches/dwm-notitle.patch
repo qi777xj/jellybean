@@ -1,8 +1,6 @@
-diff --git a/dwm.c b/dwm.c
-index 5e4d494..6cd9fb7 100644
 --- a/dwm.c
 +++ b/dwm.c
-@@ -64,8 +64,8 @@ enum { NetSupported, NetWMName, NetWMState, NetWMCheck,
+@@ -64,8 +64,8 @@
         NetWMFullscreen, NetActiveWindow, NetWMWindowType,
         NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
  enum { WMProtocols, WMDelete, WMState, WMTakeFocus, WMLast }; /* default atoms */
@@ -13,9 +11,9 @@ index 5e4d494..6cd9fb7 100644
  
  typedef union {
  	int i;
-@@ -440,10 +440,8 @@ buttonpress(XEvent *e)
+@@ -444,10 +444,8 @@
  			arg.ui = 1 << i;
- 		} else if (ev->x < x + blw)
+ 		} else if (ev->x < x + TEXTW(selmon->ltsymbol))
  			click = ClkLtSymbol;
 -		else if (ev->x > selmon->ww - (int)TEXTW(stext))
 -			click = ClkStatusText;
@@ -25,7 +23,7 @@ index 5e4d494..6cd9fb7 100644
  	} else if ((c = wintoclient(ev->window))) {
  		focus(c);
  		restack(selmon);
-@@ -730,15 +728,8 @@ drawbar(Monitor *m)
+@@ -739,15 +737,8 @@
  	x = drw_text(drw, x, 0, w, bh, lrpad / 2, m->ltsymbol, 0);
  
  	if ((w = m->ww - tw - x) > bh) {
@@ -41,7 +39,7 @@ index 5e4d494..6cd9fb7 100644
  	}
  	drw_map(drw, m->barwin, 0, 0, m->ww, bh);
  }
-@@ -1236,11 +1227,8 @@ propertynotify(XEvent *e)
+@@ -1249,11 +1240,8 @@
  			drawbars();
  			break;
  		}
@@ -54,6 +52,3 @@ index 5e4d494..6cd9fb7 100644
  		if (ev->atom == netatom[NetWMWindowType])
  			updatewindowtype(c);
  	}
--- 
-2.32.0
-
