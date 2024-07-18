@@ -1,0 +1,9 @@
+e2fsprogs
+linux-headers     make
+lzo
+pkgconf           make
+python            make
+python-setuptools make
+util-linux
+zlib
+zstd
