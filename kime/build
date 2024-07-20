@@ -24,7 +24,7 @@ cmake src -B build \
 	-DCMAKE_BUILD_TYPE=Release \
 	-DENABLE_GTK2=OFF \
 	-DENABLE_GTK3=ON \
-	-DENABLE_GTK4=OFF \
+	-DENABLE_GTK4=ON \
 	-DENABLE_QT5=OFF \
 	-DENABLE_QT6=OFF
 
@@ -36,3 +36,4 @@ install -Dm755 target/release/kime-xim				"$1/usr/bin/kime-xim"
 install -Dm755 target/release/kime					"$1/usr/bin/kime"
 install -Dm755 target/release/libkime_engine.so		"$1/usr/lib/libkime_engine.so"
 install -Dm755 build/lib/libkime-gtk3.so			"$1/usr/lib/gtk-3.0/3.0.0/immodules/im-kime.so"
+install -Dm755 build/lib/libkime-gtk4.so            "$1/usr/lib/gtk-4.0/4.0.0/immodules/libkime-gtk4.so"
