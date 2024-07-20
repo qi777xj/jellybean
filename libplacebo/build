@@ -9,6 +9,7 @@ meson \
     -Dglslang=enabled \
     -Dshaderc=enabled \
     -Dlcms=disabled \
+    -Ddemos=false \
     . output
 
 ninja -C output

@@ -1,8 +1,8 @@
-glad
 glslang
 libepoxy
 meson           make
 python-mako     make
+python-glad
 shaderc
 vulkan-headers
 vulkan-loader
