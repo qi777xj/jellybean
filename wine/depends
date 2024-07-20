@@ -1,0 +1,5 @@
+alsa-lib
+libX11
+libXext
+libudev-zero
+libusb
