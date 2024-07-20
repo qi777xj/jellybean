@@ -1,0 +1,4 @@
+#!/bin/sh -e
+
+mkdir -p "$1/usr/share/wine/mono"
+cp -r * "$1/usr/share/wine/mono/"
