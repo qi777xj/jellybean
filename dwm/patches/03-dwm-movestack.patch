@@ -1,3 +1,19 @@
+From 9a4037dc0ef56f91c009317e78e9e3790dafbb58 Mon Sep 17 00:00:00 2001
+From: BrunoCooper17 <BrunoCooper17@outlook.com>
+Date: Mon, 15 Nov 2021 14:04:53 -0600
+Subject: [PATCH] MoveStack patch
+
+This plugin allows you to move clients around in the stack and swap them 
+with the master. It emulates the behavior off mod+shift+j and mod+shift+k 
+in Xmonad. movestack(+1) will swap the client with the current focus with 
+the next client. movestack(-1) will swap the client with the current focus 
+with the previous client.
+---
+ config.def.h |  3 +++
+ movestack.c  | 48 ++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 51 insertions(+)
+ create mode 100644 movestack.c
+
 diff --git a/movestack.c b/movestack.c
 new file mode 100644
 index 0000000..520f4ae

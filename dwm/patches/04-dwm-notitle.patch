@@ -1,8 +1,8 @@
 --- a/dwm.c
 +++ b/dwm.c
-@@ -64,8 +64,8 @@
-        NetWMFullscreen, NetActiveWindow, NetWMWindowType,
+@@ -79,8 +79,8 @@
         NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
+ enum { Manager, Xembed, XembedInfo, XLast }; /* Xembed atoms */
  enum { WMProtocols, WMDelete, WMState, WMTakeFocus, WMLast }; /* default atoms */
 -enum { ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle,
 -       ClkClientWin, ClkRootWin, ClkLast }; /* clicks */
@@ -11,11 +11,11 @@
  
  typedef union {
  	int i;
-@@ -444,10 +444,8 @@
+@@ -476,10 +476,8 @@
  			arg.ui = 1 << i;
  		} else if (ev->x < x + TEXTW(selmon->ltsymbol))
  			click = ClkLtSymbol;
--		else if (ev->x > selmon->ww - (int)TEXTW(stext))
+-		else if (ev->x > selmon->ww - (int)TEXTW(stext) - getsystraywidth())
 -			click = ClkStatusText;
  		else
 -			click = ClkWinTitle;
@@ -23,10 +23,10 @@
  	} else if ((c = wintoclient(ev->window))) {
  		focus(c);
  		restack(selmon);
-@@ -739,15 +737,8 @@
+@@ -836,15 +834,8 @@
  	x = drw_text(drw, x, 0, w, bh, lrpad / 2, m->ltsymbol, 0);
  
- 	if ((w = m->ww - tw - x) > bh) {
+ 	if ((w = m->ww - tw - stw - x) > bh) {
 -		if (m->sel) {
 -			drw_setscheme(drw, scheme[m == selmon ? SchemeSel : SchemeNorm]);
 -			drw_text(drw, x, 0, w, bh, lrpad / 2, m->sel->name, 0);
@@ -37,9 +37,9 @@
  			drw_rect(drw, x, 0, w, bh, 1, 1);
 -		}
  	}
- 	drw_map(drw, m->barwin, 0, 0, m->ww, bh);
+ 	drw_map(drw, m->barwin, 0, 0, m->ww - stw, bh);
  }
-@@ -1249,11 +1240,8 @@
+@@ -1386,11 +1377,8 @@
  			drawbars();
  			break;
  		}

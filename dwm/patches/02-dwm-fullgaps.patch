@@ -1,28 +1,6 @@
-diff --git a/dwm.1 b/dwm.1
-index 13b3729..0202d96 100644
---- a/dwm.1
-+++ b/dwm.1
-@@ -140,6 +140,16 @@ View all windows with any tag.
- .B Mod1\-Control\-[1..n]
- Add/remove all windows with nth tag to/from the view.
- .TP
-+.B Mod1\--
-+Decrease the gaps around windows.
-+.TP
-+.B Mod1\-=
-+Increase the gaps around windows.
-+.TP
-+.B Mod1\-Shift-=
-+Reset the gaps around windows to
-+.BR 0 .
-+.TP
- .B Mod1\-Shift\-q
- Quit dwm.
- .SS Mouse commands
-diff --git a/dwm.c b/dwm.c
-index 9fd0286..45a58f3 100644
---- a/dwm.c
-+++ b/dwm.c
+diff -up a/dwm.c b/dwm.c
+--- a/dwm.c	2023-04-30
++++ b/dwm.c	2023-04-30
 @@ -119,6 +119,7 @@ struct Monitor {
  	int by;               /* bar geometry */
  	int mx, my, mw, mh;   /* screen size */
@@ -31,7 +9,7 @@ index 9fd0286..45a58f3 100644
  	unsigned int seltags;
  	unsigned int sellt;
  	unsigned int tagset[2];
-@@ -200,6 +201,7 @@ static void sendmon(Client *c, Monitor *m);
+@@ -200,6 +201,7 @@ static void sendmon(Client *c, Monitor *
  static void setclientstate(Client *c, long state);
  static void setfocus(Client *c);
  static void setfullscreen(Client *c, int fullscreen);
@@ -39,7 +17,7 @@ index 9fd0286..45a58f3 100644
  static void setlayout(const Arg *arg);
  static void setmfact(const Arg *arg);
  static void setup(void);
-@@ -639,6 +641,7 @@ createmon(void)
+@@ -641,6 +643,7 @@ createmon(void)
  	m->nmaster = nmaster;
  	m->showbar = showbar;
  	m->topbar = topbar;
@@ -47,11 +25,10 @@ index 9fd0286..45a58f3 100644
  	m->lt[0] = &layouts[0];
  	m->lt[1] = &layouts[1 % LENGTH(layouts)];
  	strncpy(m->ltsymbol, layouts[0].symbol, sizeof m->ltsymbol);
-@@ -1498,6 +1501,16 @@ setfullscreen(Client *c, int fullscreen)
- 	}
+@@ -1508,6 +1511,16 @@ setfullscreen(Client *c, int fullscreen)
  }
  
-+void
+ void
 +setgaps(const Arg *arg)
 +{
 +	if ((arg->i == 0) || (selmon->gappx + arg->i < 0))
@@ -61,22 +38,24 @@ index 9fd0286..45a58f3 100644
 +	arrange(selmon);
 +}
 +
- void
++void
  setlayout(const Arg *arg)
  {
-@@ -1684,18 +1697,18 @@ tile(Monitor *m)
+ 	if (!arg || !arg->v || arg->v != selmon->lt[selmon->sellt])
+@@ -1697,18 +1710,18 @@ tile(Monitor *m)
  	if (n > m->nmaster)
  		mw = m->nmaster ? m->ww * m->mfact : 0;
  	else
 -		mw = m->ww;
 -	for (i = my = ty = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), i++)
-+		mw = m->ww - m->gappx;
-+	for (i = 0, my = ty = m->gappx, c = nexttiled(m->clients); c; c = nexttiled(c->next), i++)
- 		if (i < m->nmaster) {
+-		if (i < m->nmaster) {
 -			h = (m->wh - my) / (MIN(n, m->nmaster) - i);
 -			resize(c, m->wx, m->wy + my, mw - (2*c->bw), h - (2*c->bw), 0);
 -			if (my + HEIGHT(c) < m->wh)
 -				my += HEIGHT(c);
++		mw = m->ww - m->gappx;
++	for (i = 0, my = ty = m->gappx, c = nexttiled(m->clients); c; c = nexttiled(c->next), i++)
++			if (i < m->nmaster) {
 +			h = (m->wh - my) / (MIN(n, m->nmaster) - i) - m->gappx;
 +			resize(c, m->wx + m->gappx, m->wy + my, mw - (2*c->bw) - m->gappx, h - (2*c->bw), 0);
 +			if (my + HEIGHT(c) + m->gappx < m->wh)
@@ -92,7 +71,3 @@ index 9fd0286..45a58f3 100644
 +				ty += HEIGHT(c) + m->gappx;
  		}
  }
- 
--- 
-2.26.2
-
