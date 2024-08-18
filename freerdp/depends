@@ -3,6 +3,7 @@ cairo
 cups
 ffmpeg
 freetype-harfbuzz
+fuse
 gdk-pixbuf
 glib
 gtk+3
