@@ -5,8 +5,6 @@ export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$PWD/target/release"
 export CARGO_HOME="$PWD"
 export RUSTFLAGS="$RUSTFLAGS --remap-path-prefix=$PWD=."
 
-patch -p1 < kime-updated-bindgens.patch
-
 mkdir -p .cargo
 
 cargo build --release \
