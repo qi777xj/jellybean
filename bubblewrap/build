@@ -1,0 +1,13 @@
+#!/bin/sh -e
+
+export DESTDIR="$1"
+
+meson setup \
+    -Dprefix=/usr \
+    -Dlocalstatedir=/var \
+    -Dbash_completion=disabled \
+    -Dtests=false \
+    build
+
+ninja -C build
+ninja -C build install
