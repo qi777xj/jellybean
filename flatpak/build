@@ -15,7 +15,7 @@ meson setup \
     -Dsystem_bubblewrap=bwrap \
     -Dseccomp=enabled \
     -Dsystem_helper=disabled \
-    -Dxauth=disabled \
+    -Dxauth=enabled \
     -Ddocbook_docs=disabled \
     -Dgtkdoc=disabled \
     -Dtests=false \
