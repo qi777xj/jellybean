@@ -1,0 +1,17 @@
+#!/bin/sh -e
+
+export DESTDIR="$1"
+
+cmake -B build \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_ISNTALL_LIBDIR=lib \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DLIBICAL_BUILD_TESTING=false \
+    -DGOBJECT_INTROSPECTION=true \
+    -DICAL_BUILD_DOCS=false \
+    -DSHARED_ONLY=true \
+    -DICAL_GLIB=true \
+    -Wno-dev
+
+cmake --build   build
+cmake --install build
