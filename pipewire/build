@@ -1,0 +1,26 @@
+#!/bin/sh -e
+
+for p in *.patch; do
+    patch -p1 < "$p"
+done
+
+export DESTDIR="$1"
+
+meson \
+    --prefix=/usr \
+    --libexecdir=/usr/lib \
+    -Dbluez5=enabled \
+    -Dbluez5-codec-lc3plus=disabled \
+    -Ddbus=enabled \
+    -Dsndfile=enabled \
+    -Djack=disabled \
+    -Dpipewire-jack=disabled \
+    -Dtests=disabled \
+    -Dudev=enabled \
+    -Dudevrulesdir=/usr/lib/udev/rules.d \
+    -Dsession-managers=wireplumber \
+    -Dwireplumber:system-lua=true \
+    . output
+
+ninja -C output
+ninja -C output install

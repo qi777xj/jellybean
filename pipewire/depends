@@ -1,0 +1,21 @@
+alsa-lib
+bluez
+dbus
+fdk-aac
+glib
+gst-plugins-base
+gstreamer
+libfreeaptx
+libldac
+libsndfile
+libudev-zero
+libusb
+linux-headers make
+lua make
+meson make
+ncurses
+opus
+pkgconf make
+python-packaging make
+readline
+sbc
