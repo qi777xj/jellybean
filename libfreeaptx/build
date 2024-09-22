@@ -1,0 +1,8 @@
+#!/bin/sh -e
+
+export CFLAGS="$CFLAGS"
+export LDFLAGS="$LDFLAGS"
+export ARFLAGS="$ARFLAGS -rcs"
+
+make PREFIX=/usr all
+make PREFIX=/usr DESTDIR="$1" install
