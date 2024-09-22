@@ -1,0 +1,5 @@
+dbus
+glib
+libical
+libudev-zero
+readline

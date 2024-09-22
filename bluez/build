@@ -1,0 +1,17 @@
+#!/bin/sh -e
+
+./configure \
+    --prefix=/usr \
+    --disable-systemd \
+    --disable-manpages \
+    --with-udevdir=/usr/lib/udev \
+    --enable-library
+
+make
+make DESTDIR="$1" install
+
+install -Dm644 src/main.conf "$1/etc/bluetooth/main.conf"
+
+mkdir -p "$1/etc/sv/bluetooth"
+cp -f bluetooth.run "$1/etc/sv/bluetooth/run"
+ln -sf /run/runit/supervise.bluetooth "$1/etc/sv/bluetooth/supervise"
