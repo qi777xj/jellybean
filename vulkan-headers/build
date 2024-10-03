@@ -3,7 +3,9 @@
 export DESTDIR="$1"
 
 cmake -B build \
-    -DCMAKE_INSTALL_PREFIX=/usr
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DVULKAN_HEADERS_ENABLE_MODULE=OFF
 
 cmake --build   build
 cmake --install build
