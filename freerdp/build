@@ -2,8 +2,6 @@
 
 export DESTDIR="$1"
 
-patch -p1 < freerdp-3.9.0-NTLM_fixes.patch
-
 cmake -B build \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_BUILD_TYPE=Release \
