@@ -2,6 +2,8 @@
 
 export DESTDIR="$1"
 
+patch -p1 < fix_glslang_linking.patch
+
 meson \
     --prefix=/usr \
     -Dtests=false \
