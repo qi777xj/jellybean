@@ -1,0 +1,4 @@
+#!/bin/sh -e
+
+make OPTFLAGS="$CXXFLAGS $CFLAGS" 7z 7zr 7za
+make DEST_DIR="$1" DEST_HOME=/usr install
