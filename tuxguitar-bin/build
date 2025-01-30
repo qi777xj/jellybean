@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 mkdir -p "$1/opt/tuxguitar"
-mkdir -p "$1/bin"
+mkdir -p "$1/usr/bin"
 
 cp -r * "$1/opt/tuxguitar"
-ln -s /opt/tuxguitar/tuxguitar.sh "$1/bin/tuxguitar"
+ln -s /opt/tuxguitar/tuxguitar.sh "$1/usr/bin/tuxguitar"
