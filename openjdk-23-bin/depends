@@ -1,0 +1,10 @@
+alsa-lib
+cups
+fontconfig
+freetype-harfbuzz
+libX11
+libXext
+libXi
+libXrender
+libXtst
+zlib
