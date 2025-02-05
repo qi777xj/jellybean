@@ -13,8 +13,11 @@ meson \
     -Dbluez5-codec-lc3plus=disabled \
     -Ddbus=enabled \
     -Dsndfile=enabled \
+    -Dflatpak=enabled \
     -Djack=disabled \
-    -Dpipewire-jack=disabled \
+    -Djack-devel=true \
+    -Dlibjack-path=/usr/lib \
+    -Dpipewire-jack=enabled \
     -Dtests=disabled \
     -Dudev=enabled \
     -Dudevrulesdir=/usr/lib/udev/rules.d \
