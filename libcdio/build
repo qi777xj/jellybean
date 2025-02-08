@@ -3,7 +3,8 @@
 autoreconf -fi
 
 ./configure \
-	--prefix=/usr
+	--prefix=/usr \
+	--sysconfdir=/etc
 
-make
-make DESTDIR="$1" install
+make MAKEINFO=true man_MANS=
+make DESTDIR="$1" MAKEINFO=true man_MANS= install
