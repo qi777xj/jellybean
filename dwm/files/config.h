@@ -34,6 +34,7 @@ static const Rule rules[] = {
 	{ "mpv",              NULL,	      NULL,	      0,            True,        -1 },
 	{ "nsxiv",            NULL,       NULL,       0,            True,        -1 },
 	{ "kakaotalk.exe",    NULL,       NULL,       0,            True,        -1 },
+	{ "scrcpy",           NULL,       NULL,       0,            True,        -1 },
 };
 
 /* layout(s) */
