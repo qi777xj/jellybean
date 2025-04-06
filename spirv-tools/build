@@ -4,9 +4,10 @@ export DESTDIR="$1"
 
 cmake -B build \
     -DCMAKE_INSTALL_PREFIX=/usr \
-    -DSPIRV-Headers_SOURCE_DIR=/usr
+    -DSPIRV-Headers_SOURCE_DIR=/usr \
+    -DSPIRV_TOOLS_BUILD_STATIC=OFF \
+    -DBUILD_SHARED_LIBS=ON \
+    -DSPIRV_WERROR=OFF
 
 cmake --build   build
 cmake --install build
-
-ln -s /usr/lib64/libSPIRV-Tools-shared.so "$1/usr/lib64/libSPIRV-Tools.so"
