@@ -1,2 +1,3 @@
-https://github.com/KhronosGroup/glslang/archive/15.1.0.tar.gz
+https://github.com/KhronosGroup/glslang/archive/15.2.0.tar.gz
 patches/install-static-libs.patch
+patches/fix_spirv_backcompat.patch
