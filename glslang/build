@@ -2,9 +2,7 @@
 
 export DESTDIR="$1"
 
-for patch in *.patch; do
-    patch -p1 < "$patch"
-done
+patch -p1 < install-static-libs.patch
 
 cmake -B build \
     -DCMAKE_INSTALL_PREFIX=/usr \
