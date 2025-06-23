@@ -1,4 +1,3 @@
 https://dl.suckless.org/tools/slock-1.5.tar.gz
 files/config.h
 patches/slock-capscolor.patch
-patches/slock-dpms-1.4.patch
