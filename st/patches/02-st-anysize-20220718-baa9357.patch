@@ -1,5 +1,14 @@
+From 8dcdc4b21a73268e167d98aa30f24315c7f3b7ff Mon Sep 17 00:00:00 2001
+From: Bakkeby <bakkeby@gmail.com>
+Date: Mon, 18 Jul 2022 16:52:03 +0200
+Subject: [PATCH] Adding anysize patch
+
+---
+ x.c | 56 ++++++++++++++++++++++++++++++--------------------------
+ 1 file changed, 30 insertions(+), 26 deletions(-)
+
 diff --git a/x.c b/x.c
-index 8bf998e..e2cda07 100644
+index 2a3bd38..f534347 100644
 --- a/x.c
 +++ b/x.c
 @@ -81,6 +81,7 @@ typedef XftGlyphFontSpec GlyphFontSpec;
@@ -28,7 +37,7 @@ index 8bf998e..e2cda07 100644
  	LIMIT(y, 0, win.th - 1);
  	return y / win.ch;
  }
-@@ -723,6 +724,9 @@ cresize(int width, int height)
+@@ -739,6 +740,9 @@ cresize(int width, int height)
  	col = MAX(1, col);
  	row = MAX(1, row);
  
@@ -38,7 +47,7 @@ index 8bf998e..e2cda07 100644
  	tresize(col, row);
  	xresize(col, row);
  	ttyresize(win.tw, win.th);
-@@ -840,8 +844,8 @@ xhints(void)
+@@ -869,8 +873,8 @@ xhints(void)
  	sizeh->flags = PSize | PResizeInc | PBaseSize | PMinSize;
  	sizeh->height = win.h;
  	sizeh->width = win.w;
@@ -49,7 +58,7 @@ index 8bf998e..e2cda07 100644
  	sizeh->base_height = 2 * borderpx;
  	sizeh->base_width = 2 * borderpx;
  	sizeh->min_height = win.ch + 2 * borderpx;
-@@ -1123,8 +1127,8 @@ xinit(int cols, int rows)
+@@ -1152,8 +1156,8 @@ xinit(int cols, int rows)
  	xloadcols();
  
  	/* adjust fixed window geometry */
@@ -60,7 +69,7 @@ index 8bf998e..e2cda07 100644
  	if (xw.gm & XNegative)
  		xw.l += DisplayWidth(xw.dpy, xw.scr) - win.w - 2;
  	if (xw.gm & YNegative)
-@@ -1213,7 +1217,7 @@ xinit(int cols, int rows)
+@@ -1242,7 +1246,7 @@ xinit(int cols, int rows)
  int
  xmakeglyphfontspecs(XftGlyphFontSpec *specs, const Glyph *glyphs, int len, int x, int y)
  {
@@ -69,7 +78,7 @@ index 8bf998e..e2cda07 100644
  	ushort mode, prevmode = USHRT_MAX;
  	Font *font = &dc.font;
  	int frcflags = FRC_NORMAL;
-@@ -1346,7 +1350,7 @@ void
+@@ -1375,7 +1379,7 @@ void
  xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len, int x, int y)
  {
  	int charlen = len * ((base.mode & ATTR_WIDE) ? 2 : 1);
@@ -78,12 +87,12 @@ index 8bf998e..e2cda07 100644
  	    width = charlen * win.cw;
  	Color *fg, *bg, *temp, revfg, revbg, truefg, truebg;
  	XRenderColor colfg, colbg;
-@@ -1436,17 +1440,17 @@ xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len, int x, i
+@@ -1465,17 +1469,17 @@ xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len, int x, i
  
  	/* Intelligent cleaning up of the borders. */
  	if (x == 0) {
 -		xclear(0, (y == 0)? 0 : winy, borderpx,
-+		xclear(0, (y == 0)? 0 : winy, win.vborderpx,
++		xclear(0, (y == 0)? 0 : winy, win.hborderpx,
  			winy + win.ch +
 -			((winy + win.ch >= borderpx + win.th)? win.h : 0));
 +			((winy + win.ch >= win.vborderpx + win.th)? win.h : 0));
@@ -102,7 +111,7 @@ index 8bf998e..e2cda07 100644
  		xclear(winx, winy + win.ch, winx + width, win.h);
  
  	/* Clean up the region we want to draw to. */
-@@ -1540,35 +1544,35 @@ xdrawcursor(int cx, int cy, Glyph g, int ox, int oy, Glyph og)
+@@ -1569,35 +1573,35 @@ xdrawcursor(int cx, int cy, Glyph g, int ox, int oy, Glyph og)
  		case 3: /* Blinking Underline */
  		case 4: /* Steady Underline */
  			XftDrawRect(xw.draw, &drawcol,
@@ -150,3 +159,6 @@ index 8bf998e..e2cda07 100644
  				win.cw, 1);
  	}
  }
+-- 
+2.37.1
+
