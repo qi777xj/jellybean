@@ -1,1 +1,5 @@
-/var/db/repos/kiss-xorg/xorg/st/depends
+fontconfig
+libX11
+libXft
+ncurses make
+pkgconf make
