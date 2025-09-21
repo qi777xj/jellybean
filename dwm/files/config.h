@@ -30,11 +30,12 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class              instance    title       tags mask     isfloating   monitor */
-	{ "mpv",              NULL,	      NULL,	      0,            True,        -1 },
-	{ "nsxiv",            NULL,       NULL,       0,            True,        -1 },
-	{ "kakaotalk.exe",    NULL,       NULL,       0,            True,        -1 },
-	{ "scrcpy",           NULL,       NULL,       0,            True,        -1 },
+	/* class                    instance    title       tags mask     isfloating   monitor */
+	{ "mpv",                    NULL,	    NULL,	    0,            True,        -1 },
+	{ "nsxiv",                  NULL,       NULL,       0,            True,        -1 },
+	{ "kakaotalk.exe",          NULL,       NULL,       0,            True,        -1 },
+	{ "scrcpy",                 NULL,       NULL,       0,            True,        -1 },
+	{ "kime-candidate-window",  NULL,       NULL,       0,            True,        -1 },
 };
 
 /* layout(s) */
