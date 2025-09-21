@@ -4,3 +4,4 @@ patches/00-st-scrollback.patch
 patches/01-st-scrollback-mouse-altscreen-20220127-2c5edf2.patch
 patches/02-st-anysize-20220718-baa9357.patch
 patches/03-st-xresources-20230320-45a15676.patch
+patches/04-st-font2-0.8.5.patch
