@@ -1,3 +1,3 @@
-https://github.com/MaskRay/ccls/archive/0.20241108.tar.gz
+https://github.com/MaskRay/ccls/archive/0.20250815.tar.gz
 https://github.com/Tencent/rapidjson/archive/v1.1.0.tar.gz	third_party/rapidjson
 patches/rapidjson-fix-non-compiling-assignment-operator.patch
