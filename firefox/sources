@@ -1,0 +1,5 @@
+https://ftp.mozilla.org/pub/firefox/releases/145.0.1/source/firefox-145.0.1.source.tar.xz
+patches/fix-target-detection.patch
+patches/no-atk.patch
+patches/no-dbus.patch
+patches/no-fribidi.patch

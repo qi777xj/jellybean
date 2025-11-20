@@ -1,0 +1,7 @@
+https://ftp.mozilla.org/pub/firefox/releases/VERSION/source/firefox-VERSION.source.tar.xz
+patches/fix-header-musl.patch
+patches/fix-target-detection.patch
+patches/musl-sandbox.patch
+patches/no-atk.patch
+patches/no-dbus.patch
+patches/no-fribidi.patch
