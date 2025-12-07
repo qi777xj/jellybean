@@ -1,0 +1,5 @@
+#!/bin/sh -e
+
+mkdir -p "$1/opt/openjdk-bin"
+
+cp -r * "$1/opt/openjdk-bin"
