@@ -6,7 +6,7 @@ sed -i -e '/examples/d;/third_party/d' CMakeLists.txt
 sed -i -e '/build-version/d' glslc/CMakeLists.txt
 cat <<- EOF > glslc/src/build-version.inc
     "shaderc 2025.5\n"
-    "SPIRV-Tools-2025.4\n"
+    "SPIRV-Tools-2025.5\n"
     "glslang-16.1.0\n"
 EOF
 
