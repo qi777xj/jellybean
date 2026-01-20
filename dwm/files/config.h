@@ -11,6 +11,8 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+static const int vertpad            = 0;        /* vertical padding of bar */
+static const int sidepad            = 0;        /* horizontal padding of bar */
 static const char *fonts[]          = { "MesloLGS Nerd Font:size=11", "D2Coding:size=11", "KoPubWorld돋움체:size=11" };
 static const char dmenufont[]       = "MesloLGS Nerd Font:size=11";
 static const char col_black[]       = "#000000";
@@ -43,6 +45,7 @@ static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] 
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
+static const int refreshrate = 120;  /* refresh rate (per second) for client move/resize */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */

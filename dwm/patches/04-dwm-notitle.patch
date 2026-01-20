@@ -1,6 +1,6 @@
 --- a/dwm.c
 +++ b/dwm.c
-@@ -79,8 +79,8 @@
+@@ -78,8 +78,8 @@
         NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
  enum { Manager, Xembed, XembedInfo, XLast }; /* Xembed atoms */
  enum { WMProtocols, WMDelete, WMState, WMTakeFocus, WMLast }; /* default atoms */
@@ -11,7 +11,7 @@
  
  typedef union {
  	int i;
-@@ -476,10 +476,8 @@
+@@ -477,10 +477,8 @@
  			arg.ui = 1 << i;
  		} else if (ev->x < x + TEXTW(selmon->ltsymbol))
  			click = ClkLtSymbol;
@@ -23,23 +23,23 @@
  	} else if ((c = wintoclient(ev->window))) {
  		focus(c);
  		restack(selmon);
-@@ -836,15 +834,8 @@
+@@ -837,15 +835,8 @@
  	x = drw_text(drw, x, 0, w, bh, lrpad / 2, m->ltsymbol, 0);
  
  	if ((w = m->ww - tw - stw - x) > bh) {
 -		if (m->sel) {
 -			drw_setscheme(drw, scheme[m == selmon ? SchemeSel : SchemeNorm]);
--			drw_text(drw, x, 0, w, bh, lrpad / 2, m->sel->name, 0);
+-			drw_text(drw, x, 0, w - 2 * sp, bh, lrpad / 2, m->sel->name, 0);
 -			if (m->sel->isfloating)
 -				drw_rect(drw, x + boxs, boxs, boxw, boxw, m->sel->isfixed, 0);
 -		} else {
  			drw_setscheme(drw, scheme[SchemeNorm]);
- 			drw_rect(drw, x, 0, w, bh, 1, 1);
+ 			drw_rect(drw, x, 0, w - 2 * sp, bh, 1, 1);
 -		}
  	}
  	drw_map(drw, m->barwin, 0, 0, m->ww - stw, bh);
  }
-@@ -1386,11 +1377,8 @@
+@@ -1387,11 +1378,8 @@
  			drawbars();
  			break;
  		}
