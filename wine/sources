@@ -1,2 +1,2 @@
-https://dl.winehq.org/wine/source/10.x/wine-10.20.tar.xz
-https://github.com/mstorsjo/llvm-mingw/releases/download/20251202/llvm-mingw-20251202-ucrt-ubuntu-22.04-x86_64.tar.xz llvm-mingw
+https://dl.winehq.org/wine/source/11.0/wine-11.0.tar.xz
+https://github.com/mstorsjo/llvm-mingw/releases/download/20251216/llvm-mingw-20251216-ucrt-ubuntu-22.04-x86_64.tar.xz llvm-mingw
