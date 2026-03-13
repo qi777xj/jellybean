@@ -1,0 +1,4 @@
+glib
+lua         make
+meson       make
+pipewire

@@ -21,8 +21,7 @@ meson \
     -Dtests=disabled \
     -Dudev=enabled \
     -Dudevrulesdir=/usr/lib/udev/rules.d \
-    -Dsession-managers=wireplumber \
-    -Dwireplumber:system-lua=true \
+    -Dsession-managers=[] \
     . output
 
 ninja -C output
