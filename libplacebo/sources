@@ -1,3 +1,2 @@
-https://code.videolan.org/videolan/libplacebo/-/archive/v7.351.0/libplacebo-v7.351.0.tar.gz
+https://code.videolan.org/videolan/libplacebo/-/archive/v7.360.0/libplacebo-v7.360.0.tar.gz
 patches/fix_glslang_linking.patch
-patches/vulkan-python-xml.patch
