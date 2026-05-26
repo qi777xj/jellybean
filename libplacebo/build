@@ -12,7 +12,7 @@ meson \
     -Dvulkan=enabled \
     -Dglslang=enabled \
     -Dshaderc=enabled \
-    -Dlcms=disabled \
+    -Dlcms=enabled \
     -Ddemos=false \
     . output
 

@@ -1,4 +1,5 @@
 glslang
+lcms
 libepoxy
 meson           make
 python-mako     make
