@@ -2,5 +2,4 @@ cmake           make
 libX11
 libXrandr
 libxcb
-python-lxml
 vulkan-headers
