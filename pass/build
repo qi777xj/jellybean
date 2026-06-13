@@ -1,0 +1,8 @@
+#!/bin/sh -e
+
+make DESTDIR="$1" \
+    PREFIX=/usr \
+    WITH_BASHCOMP=no \
+    WITH_ZSHCOMP=no \
+    WITH_FISHCOMP=no \
+    install
