@@ -1,0 +1,14 @@
+#!/bin/sh -e
+
+mkdir -p "$1/usr/bin"
+mkdir -p "$1/opt/thunderbird"
+
+cp -r * "$1/opt/thunderbird/"
+ln -s /opt/thunderbird/thunderbird "$1/usr/bin/thunderbird"
+
+for i in 16 22 24 32 48 256; do
+    mkdir -p "$1/usr/share/icons/hicolor/${i}x${i}/apps"
+    ln -s /opt/thunderbird/chrome/icons/default/default$i.png "$1/usr/share/icons/hicolor/${i}x${i}/apps/thunderbird.png"
+done
+
+ln -sf /usr/lib/libnssckbi.so "$1/opt/thunderbird/libnssckbi.so"
