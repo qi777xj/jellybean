@@ -1,0 +1,6 @@
+#!/bin/sh -e
+
+cargo build --release --target-dir target
+
+install -Dm755 target/release/pass-secret-service "$1/usr/bin/pass-secret-service"
+install -Dm644 systemd/org.freedesktop.secrets.service "$1/usr/share/dbus-1/services/org.freedesktop.secrets.service"
