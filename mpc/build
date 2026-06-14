@@ -1,0 +1,14 @@
+#!/bin/sh -e
+
+export DESTDIR="$1"
+
+meson setup \
+    -Dprefix=/usr \
+    -Dtest=false \
+    output
+
+ninja -C output
+ninja -C output install
+
+# avoid conflict with miktex
+mv "$1/usr/bin/mpc" "$1/usr/bin/mpc-mpd"
