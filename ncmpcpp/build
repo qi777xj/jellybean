@@ -1,0 +1,18 @@
+#!/bin/sh -e
+
+patch -p1 < fix-boost-1.89.patch
+
+autoreconf -fi
+
+export BOOST_LIB_SUFFIX=''
+
+./configure \
+    --prefix=/usr \
+    --enable-clock \
+    --enable-outputs \
+    --enable-visualizer \
+    --without-taglib \
+    --with-fftw
+
+make
+make DESTDIR="$1" install

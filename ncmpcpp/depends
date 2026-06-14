@@ -1,0 +1,6 @@
+boost           make
+curl
+fftw
+libmpdclient    make
+ncurses
+readline
