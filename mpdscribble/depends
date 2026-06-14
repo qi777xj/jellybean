@@ -1,0 +1,6 @@
+boost           make
+curl
+libgcrypt
+libmpdclient
+meson           make
+samurai         make
