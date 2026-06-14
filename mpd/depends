@@ -1,0 +1,4 @@
+alsa-lib
+libmpdclient
+meson   make
+samurai make
