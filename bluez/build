@@ -1,5 +1,7 @@
 #!/bin/sh -e
 
+export ICAL_LIBS="-lical -licalvcal"
+
 ./configure \
     --prefix=/usr \
     --sysconfdir=/etc \
