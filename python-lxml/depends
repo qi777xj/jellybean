@@ -1,0 +1,3 @@
+cython  make
+libxml2
+libxslt
