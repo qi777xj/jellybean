@@ -1,0 +1,13 @@
+#!/bin/sh -e
+
+for patch in *.patch; do
+    patch -p1 < "$patch"
+done
+
+autoreconf -fi
+
+./configure \
+    --prefix=/usr
+
+make
+make DESTDIR="$1" install
