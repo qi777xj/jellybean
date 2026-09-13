@@ -1,0 +1,68 @@
+--- a/gdk/gdk.c
++++ b/gdk/gdk.c
+@@ -42,8 +42,6 @@
+ #include <stdio.h>
+ #include <ctype.h>
+ 
+-#include <fribidi.h>
+-
+ /* GTK has a general architectural assumption that gsize is pointer-sized
+  * (equivalent to uintptr_t), making it non-portable to architectures like
+  * CHERI where that isn't true. If a future release relaxes that
+@@ -652,17 +650,6 @@
+ PangoDirection
+ gdk_unichar_direction (gunichar ch)
+ {
+-  FriBidiCharType fribidi_ch_type;
+-
+-  G_STATIC_ASSERT (sizeof (FriBidiChar) == sizeof (gunichar));
+-
+-  fribidi_ch_type = fribidi_get_bidi_type (ch);
+-
+-  if (!FRIBIDI_IS_STRONG (fribidi_ch_type))
+-    return PANGO_DIRECTION_NEUTRAL;
+-  else if (FRIBIDI_IS_RTL (fribidi_ch_type))
+-    return PANGO_DIRECTION_RTL;
+-  else
+     return PANGO_DIRECTION_LTR;
+ }
+ 
+--- a/gdk/meson.build
++++ b/gdk/meson.build
+@@ -224,7 +224,6 @@
+   pixbuf_dep,
+   cairo_dep,
+   pango_dep,
+-  fribidi_dep,
+   cairogobj_dep,
+   glib_dep,
+   gobject_dep,
+--- a/gtk/meson.build
++++ b/gtk/meson.build
+@@ -923,7 +923,6 @@
+   pangocairo_dep,
+   harfbuzz_dep,
+   hb_subset_dep,
+-  fribidi_dep,
+   cairogobj_dep,
+   fontconfig_dep,
+   pixbuf_dep,
+--- a/meson.build
++++ b/meson.build
+@@ -21,7 +21,6 @@
+ glib_req           = '>= 2.89.3' # `@0@.@1@'.format(glib_major_req, glib_minor_req)
+ pango_req          = '>= @0@.@1@'.format(pango_major_req, pango_minor_req)
+ harfbuzz_req       = '>= 8.4.0'
+-fribidi_req        = '>= 1.0.6'
+ cairo_req          = '>= 1.18.2'
+ gdk_pixbuf_req     = '>= 2.30.0'
+ wayland_proto_req  = '>= 1.48'
+@@ -463,8 +462,6 @@
+ cairo_dep      = dependency('cairo', version: cairo_req,
+                             default_options: ['zlib=enabled', 'tests=disabled'])
+ cairogobj_dep  = dependency('cairo-gobject', version: cairo_req)
+-fribidi_dep    = dependency('fribidi', version: fribidi_req,
+-                            default_options: ['docs=false'])
+ harfbuzz_dep   = dependency('harfbuzz', version: harfbuzz_req,
+                             default_options: harfbuzz_fallback_options)
+ hb_subset_dep  = dependency('harfbuzz-subset', version: harfbuzz_req)

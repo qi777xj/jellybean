@@ -1,0 +1,35 @@
+#!/bin/sh -e
+
+export DESTDIR="$1"
+
+patch -p1 < no-fribidi.patch
+
+pkg-config --exists gobject-introspection-1.0 && {
+    gir=enabled
+
+    # If introspection is enabled, harfbuzz must be built
+    # with introspection support due to hb-glib.h header.
+    pkg-config --exists harfbuzz-gobject || {
+        echo 'rebuild freetype-harfbuzz for gobject'
+        exit 1
+    }
+}
+
+meson setup \
+    -Dprefix=/usr \
+    -Ddocumentation=false \
+    -Dwayland-backend=false \
+    -Dwin32-backend=false \
+    -Dintrospection="${gir:-disabled}" \
+    -Dmedia-gstreamer=disabled \
+    -Dprint-cups=disabled \
+    -Df16c=disabled \
+    -Dbuild-demos=false \
+    -Dbuild-tests=false \
+    -Dbuild-testsuite=false \
+    -Dbuild-examples=false \
+    -Dvulkan=enabled \
+    output
+
+ninja -C output
+ninja -C output install

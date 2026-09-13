@@ -1,0 +1,23 @@
+cairo
+fontconfig
+freetype-harfbuzz
+gdk-pixbuf
+glib
+graphene
+libX11
+libXcomposite
+libXcursor
+libXdamage
+libXext
+libXfixes
+libXi
+libXinerama
+libXrandr
+libepoxy
+libjpeg-turbo
+libpng
+libxkbcommon
+meson   make
+pango
+pkgconf make
+tiff
