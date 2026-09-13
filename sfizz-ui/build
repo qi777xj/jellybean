@@ -1,0 +1,20 @@
+#!/bin/sh -e
+
+export DESTDIR="$1"
+
+for patch in *.patch; do
+    patch -p1 < "$patch"
+done
+
+sed -i '0,/^#include/s/^#include/#include <algorithm>\n#include/' plugins/editor/tools/layout-maker/sources/reader.cpp
+
+cmake -B build \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_BUILD_TYPE=None \
+    -DCMAKE_CXX_STANDARD=17 \
+    -DSFIZZ_USE_SYSTEM_ABSEIL=ON \
+    -DSFIZZ_JACK=OFF \
+    -DSFIZZ_RENDER=OFF
+
+cmake --build   build
+cmake --install build

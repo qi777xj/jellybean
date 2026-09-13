@@ -1,0 +1,14 @@
+abseil-cpp
+cairo
+fontconfig
+freetype-harfbuzz
+glib
+libX11
+libxcb
+libxkbcommon
+pango
+pipewire
+xcb-util
+xcb-util-cursor
+xcb-util-keysyms
+zenity

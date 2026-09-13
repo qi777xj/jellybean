@@ -1,0 +1,10 @@
+--- a/plugins/editor/tools/layout-maker/sources/reader.cpp
++++ b/plugins/editor/tools/layout-maker/sources/reader.cpp
+@@ -10,6 +10,7 @@
+ #include <absl/strings/string_view.h>
+ #include <iostream>
+ #include <fstream>
++#include <algorithm>
+ 
+ ///
+ class tokenizer {

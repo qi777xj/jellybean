@@ -1,0 +1,23 @@
+From 7cc6b0e0ab9b7dd5b98f71e74d7c75694761538a Mon Sep 17 00:00:00 2001
+From: Arne Scheffler <a.scheffler@steinberg.de>
+Date: Sun, 14 Apr 2024 17:49:48 +0200
+Subject: [PATCH] fix compile error reported in #324
+
+---
+ vstgui/lib/finally.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/plugins/editor/external/vstgui4/vstgui/lib/finally.h b/plugins/editor/external/vstgui4/vstgui/lib/finally.h
+index f2ad292f7..b795e3059 100644
+--- a/plugins/editor/external/vstgui4/vstgui/lib/finally.h
++++ b/plugins/editor/external/vstgui4/vstgui/lib/finally.h
+@@ -18,7 +18,7 @@ class FinalAction
+ 	FinalAction (FinalAction&& other) noexcept
+ 	{
+ 		action = std::move (other.action);
+-		other.invoke (false);
++		other.invoke = false;
+ 	}
+ 	FinalAction (const FinalAction&) = delete;
+ 	FinalAction& operator= (const FinalAction&) = delete;
+
