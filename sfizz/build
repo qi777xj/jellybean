@@ -1,0 +1,14 @@
+#!/bin/sh -e
+
+export DESTDIR="$1"
+
+patch -p1 < fix-absl.patch
+
+cmake -B build \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_BUILD_TYPE=None \
+    -DCMAKE_CXX_STANDARD=17 \
+    -DSFIZZ_USE_SYSTEM_ABSEIL=ON
+
+cmake --build   build
+cmake --install build
