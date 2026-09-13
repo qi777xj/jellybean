@@ -1,0 +1,6 @@
+libadwaita
+gdk-pixbuf
+pango
+itstool         make
+gettext-tiny    make
+meson           make
