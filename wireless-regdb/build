@@ -1,0 +1,6 @@
+#!/bin/sh -e
+
+sed -i 's/[.]5[.]gz/.5/g' Makefile
+sed -i 's/[.]gz//' regulatory.db.5
+
+make install DESTDIR="$1" MANDIR="usr/share/man" FIRMWARE_PATH="usr/lib/firmware"
